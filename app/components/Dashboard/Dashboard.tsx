@@ -25,6 +25,7 @@ import NextEclipse from './NextEclipse';
 import NextSolarStorm from './NextSolarStorm';
 import Orders from './Orders';
 import PlanetAtmosphere from '../PlanetAtmosphere/PlanetAtmosphere';
+import PlanetList from '../PlanetList/PlanetList';
 
 function Copyright() {
   return (
@@ -210,9 +211,9 @@ export default function Dashboard() {
               </Paper>
             </Grid>
             {/* Recent Orders */}
-            <Grid item xs={12}>
+            <Grid item xs={12} lg={9}>
               <Paper className={classes.paper}>
-                <Orders />
+                <PlanetList />
               </Paper>
             </Grid>
           </Grid>
