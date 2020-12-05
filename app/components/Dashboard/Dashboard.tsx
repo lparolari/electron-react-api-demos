@@ -20,11 +20,11 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
-import Chart from './Chart';
 import { mainListItems, secondaryListItems } from './listItems';
 import NextEclipse from './NextEclipse';
 import NextSolarStorm from './NextSolarStorm';
 import Orders from './Orders';
+import PlanetAtmosphere from '../PlanetAtmosphere/PlanetAtmosphere';
 
 function Copyright() {
   return (
@@ -111,7 +111,6 @@ const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
     display: 'flex',
-    overflow: 'auto',
     flexDirection: 'column',
   },
   fixedHeight: {
@@ -187,22 +186,27 @@ export default function Dashboard() {
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            {/* Chart */}
-            <Grid item xs={12} md={6} lg={6}>
+            <Grid item xs={12} sm={12} md={6} lg={6}>
               <Paper className={fixedHeightPaper}>
-                <Chart />
+                <></>
               </Paper>
             </Grid>
             {/* Next Eclipse */}
-            <Grid item xs={12} sm={12} md={6} lg={3}>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
               <Paper className={fixedHeightPaper}>
                 <NextEclipse />
               </Paper>
             </Grid>
             {/* Next Solar Storm */}
-            <Grid item xs={12} sm={12} md={6} lg={3}>
+            <Grid item xs={12} sm={6} md={6} lg={3}>
               <Paper className={fixedHeightPaper}>
                 <NextSolarStorm />
+              </Paper>
+            </Grid>
+            {/* Planet Atm */}
+            <Grid item xs={12} sm={6} md={6} lg={3}>
+              <Paper className={classes.paper}>
+                <PlanetAtmosphere />
               </Paper>
             </Grid>
             {/* Recent Orders */}
