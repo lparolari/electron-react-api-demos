@@ -2,7 +2,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import routes from './constants/routes.json';
-import App from './containers/App';
+import App from './containers/App/App';
 import HomePage from './containers/HomePage';
 
 // Lazily load routes and code split with webpack
@@ -10,7 +10,7 @@ const LazyCounterPage = React.lazy(() =>
   import(/* webpackChunkName: "CounterPage" */ './containers/CounterPage')
 );
 
-const CounterPage = (props: Record<string, any>) => (
+const CounterPage = (props: Record<string, unknown>) => (
   <React.Suspense fallback={<h1>Loading...</h1>}>
     <LazyCounterPage {...props} />
   </React.Suspense>
