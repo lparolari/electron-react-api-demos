@@ -1,13 +1,13 @@
 /* eslint react/jsx-props-no-spreading: off */
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import routes from './constants/routes.json';
+import routes from './constants/routes';
 import App from './containers/App/App';
-import HomePage from './containers/HomePage';
+import HomePage from './screens/HomeScreen';
 
 // Lazily load routes and code split with webpack
 const LazyCounterPage = React.lazy(() =>
-  import(/* webpackChunkName: "CounterPage" */ './containers/CounterPage')
+  import(/* webpackChunkName: "CounterPage" */ './screens/CounterScreen')
 );
 
 const CounterPage = (props: Record<string, unknown>) => (

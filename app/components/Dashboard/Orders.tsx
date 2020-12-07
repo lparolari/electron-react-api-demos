@@ -10,7 +10,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
-import routes from '../../constants/routes.json';
+import routes from '../../constants/routes';
 import Title from './Title';
 
 // Generate Order Data

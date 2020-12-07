@@ -11,7 +11,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import { Image, FileCopy } from '@material-ui/icons';
 
-import routes from '../../constants/routes.json';
+import routes from '../../constants/routes';
 import Title from '../InfoBox/Title';
 
 // Generate Order Data

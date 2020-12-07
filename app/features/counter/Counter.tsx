@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styles from './Counter.css';
-import routes from '../../constants/routes.json';
+import routes from '../../constants/routes';
 import {
   increment,
   decrement,
