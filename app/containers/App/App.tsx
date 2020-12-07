@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import React from 'react';
+import { useLocation } from 'react-router';
 
 import AppBar from '@material-ui/core/AppBar';
 import Badge from '@material-ui/core/Badge';
@@ -10,14 +11,16 @@ import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
 import Link from '@material-ui/core/Link';
-import List from '@material-ui/core/List';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
+
+import MainMenu from './MainMenu';
+import SecondaryMenu from './SecondaryMenu';
+import { routeName } from '../../constants/routes';
 
 function Copyright() {
   return (
@@ -109,6 +112,7 @@ export type Props = {
 
 export default function App({ children }: Props) {
   const classes = useStyles();
+  const location = useLocation();
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -144,7 +148,7 @@ export default function App({ children }: Props) {
             noWrap
             className={classes.title}
           >
-            Dashboard
+            {routeName(location.pathname)}
           </Typography>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -166,9 +170,9 @@ export default function App({ children }: Props) {
           </IconButton>
         </div>
         <Divider />
-        <List>{mainListItems}</List>
+        <MainMenu />
         <Divider />
-        <List>{secondaryListItems}</List>
+        <SecondaryMenu />
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
