@@ -6,8 +6,8 @@ import routes from './constants/routes';
 import App from './containers/App/App';
 import HomePage from './screens/HomeScreen';
 import ManagedWindow from './screens/Window/ManagedWindow';
-import NewBorderlessWindow from './screens/Window/NewFramelessWindow';
-import NewWindow from './screens/Window/NewWindow';
+import NewBorderlessWindow from './screens/Window/NewFramelessWindow/Window';
+import NewWindow from './screens/Window/NewWindow/Window';
 import UsingEventsWindow from './screens/Window/UsingEventsWindow';
 
 // Lazily load routes and code split with webpack

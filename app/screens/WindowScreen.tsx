@@ -1,19 +1,10 @@
-import clsx from 'clsx';
-import { BrowserWindow, Menu, Remote, remote } from 'electron';
+import { BrowserWindow, remote } from 'electron';
 import React, { useEffect, useState } from 'react';
-import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   AppBar,
-  Box,
   Button,
-  Divider,
   Grid,
-  IconButton,
-  makeStyles,
   Paper,
   Tab,
   Table,
@@ -30,41 +21,10 @@ import PaddedContainer from '../components/Container/Container';
 import TabPanel from '../components/TabPanel/TabPanel';
 import routes from '../constants/routes';
 import url from '../constants/url';
+import NewFramelessWindowTab from './Window/NewFramelessWindow/Tab';
 import NewWindowTab from './Window/NewWindow/Tab';
 
 type TabPanelProps = { value: number; index: number };
-
-const useStyles = makeStyles(() => ({
-  highlighterFixedHeight: {
-    height: '280px',
-  },
-}));
-
-function NewFramelessWindowTab(props: TabPanelProps) {
-  return (
-    <TabPanel {...props}>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => {
-          const win = new remote.BrowserWindow({
-            width: 400,
-            height: 320,
-            webPreferences: {
-              nodeIntegration: true,
-            },
-            frame: false,
-          });
-
-          win.loadURL(`${url(routes().window().frameless())}`);
-          win.show();
-        }}
-      >
-        Crea finestra frameless
-      </Button>
-    </TabPanel>
-  );
-}
 
 function ManagedWindowTab(props: TabPanelProps) {
   const [pos, setPos] = useState([0, 0]);
