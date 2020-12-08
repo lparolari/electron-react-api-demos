@@ -1,7 +1,9 @@
+import { shell } from 'electron';
 import React from 'react';
 
 import AppBar from '@material-ui/core/AppBar';
 import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
@@ -22,7 +24,34 @@ export default function WindowScreen() {
     <PaddedContainer>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Typography>Descrizione sulle finestre...</Typography>
+          <Typography paragraph>
+            Il modulo <code>BrowserWindow</code> di Electron permette di creare
+            nuove finestre o di gestire le esistenti.
+          </Typography>
+          <Typography paragraph>
+            Ogni finestra viene eseguita su un processo separato, detto{' '}
+            <i>renderer process</i>. Il <i>renderer process</i> è istanziato dal{' '}
+            <i>main process</i> e può gestire solo la finestra associata, al
+            contrario il <i>main process</i> può gestire tutte le finestre
+            aperte ed ha il compito di instanziare le <code>BrowserWindow</code>
+            . Due processi (main e renderer) possono comunicare tramite IPC.
+            Attenzione: un processo di renderer muore quando la finestra
+            associata viene chiusa.
+          </Typography>
+          <Typography paragraph>
+            Vedi la {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+            <Link
+              onClick={() => {
+                shell.openExternal(
+                  'http://electron.atom.io/docs/api/browser-window'
+                );
+              }}
+              color="secondary"
+            >
+              documentazione ufficiale
+            </Link>
+            .
+          </Typography>
         </Grid>
         <Grid item xs={12}>
           <Paper>
