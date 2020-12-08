@@ -5,7 +5,6 @@ import { useLocation } from 'react-router';
 import AppBar from '@material-ui/core/AppBar';
 import Badge from '@material-ui/core/Badge';
 import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
@@ -101,10 +100,7 @@ const useStyles = makeStyles((theme) => ({
     height: '100vh',
     overflow: 'auto',
   },
-  container: {
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
-  },
+  container: {},
 }));
 
 export type Props = {
@@ -178,12 +174,12 @@ export default function App({ children }: Props) {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
+        <div className={classes.container}>
           {children}
           <Box pt={4}>
             <Copyright />
           </Box>
-        </Container>
+        </div>
       </main>
     </div>
   );
