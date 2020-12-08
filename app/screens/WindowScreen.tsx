@@ -1,70 +1,44 @@
+import clsx from 'clsx';
 import { BrowserWindow, Menu, Remote, remote } from 'electron';
 import React, { useEffect, useState } from 'react';
+import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 import {
-  Paper,
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
   AppBar,
   Box,
   Button,
+  Divider,
   Grid,
+  IconButton,
+  makeStyles,
+  Paper,
   Tab,
-  TableContainer,
-  Tabs,
   Table,
+  TableBody,
+  TableCell,
+  TableContainer,
   TableHead,
   TableRow,
-  TableCell,
-  TableBody,
+  Tabs,
 } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
 import PaddedContainer from '../components/Container/Container';
-import url from '../constants/url';
-import routes from '../constants/routes';
 import TabPanel from '../components/TabPanel/TabPanel';
+import routes from '../constants/routes';
+import url from '../constants/url';
+import NewWindowTab from './Window/NewWindow/Tab';
 
 type TabPanelProps = { value: number; index: number };
 
-function NewWindowTab(props: TabPanelProps) {
-  return (
-    <TabPanel {...props}>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => {
-          const win = new remote.BrowserWindow({
-            width: 400,
-            height: 320,
-            webPreferences: {
-              nodeIntegration: true,
-            },
-          });
-          win.setMenu(
-            remote.Menu.buildFromTemplate([
-              {
-                label: '&File',
-                submenu: [
-                  {
-                    label: '&Close',
-                    accelerator: 'Ctrl+W',
-                    click: () => {
-                      win.close();
-                    },
-                  },
-                ],
-              },
-            ])
-          );
-
-          win.loadURL(`${url(routes().window().new())}`);
-          win.show();
-        }}
-      >
-        Crea finestra
-      </Button>
-    </TabPanel>
-  );
-}
+const useStyles = makeStyles(() => ({
+  highlighterFixedHeight: {
+    height: '280px',
+  },
+}));
 
 function NewFramelessWindowTab(props: TabPanelProps) {
   return (
@@ -97,7 +71,7 @@ function ManagedWindowTab(props: TabPanelProps) {
   const [size, setSize] = useState([0, 0]);
 
   return (
-    <TabPanel {...props}>
+    <TabPanel {...props} sourceCode={<></>}>
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Button
@@ -185,7 +159,7 @@ function UsingEventsWindowTab(props: TabPanelProps) {
   }, [win]);
 
   return (
-    <TabPanel {...props}>
+    <TabPanel {...props} sourceCode={<></>}>
       <Button
         variant="contained"
         color="primary"
@@ -224,19 +198,21 @@ export default function WindowScreen() {
           <Typography>Descrizione sulle finestre...</Typography>
         </Grid>
         <Grid item xs={12}>
-          <AppBar position="static" color="transparent">
-            <Tabs value={tab} onChange={handleTabSelect}>
-              <Tab label="Nuova finestra" />
-              <Tab label="Finestra borderless" />
-              <Tab label="Finestra gestita" />
-              <Tab label="Usa eventi" />
-            </Tabs>
-          </AppBar>
+          <Paper>
+            <AppBar position="static" color="transparent">
+              <Tabs value={tab} onChange={handleTabSelect}>
+                <Tab label="Nuova finestra" />
+                <Tab label="Finestra borderless" />
+                <Tab label="Finestra gestita" />
+                <Tab label="Usa eventi" />
+              </Tabs>
+            </AppBar>
 
-          <NewWindowTab value={tab} index={0} />
-          <NewFramelessWindowTab value={tab} index={1} />
-          <ManagedWindowTab value={tab} index={2} />
-          <UsingEventsWindowTab value={tab} index={3} />
+            <NewWindowTab value={tab} index={0} />
+            <NewFramelessWindowTab value={tab} index={1} />
+            <ManagedWindowTab value={tab} index={2} />
+            <UsingEventsWindowTab value={tab} index={3} />
+          </Paper>
         </Grid>
       </Grid>
     </PaddedContainer>
