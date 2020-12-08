@@ -6,6 +6,7 @@ import routes from '../../../constants/routes';
 import url from '../../../constants/url';
 import DemoButton from './DemoButton';
 import FocusButton from './FocusButton';
+import Source from '../Source';
 
 type TabPanelProps = { value: number; index: number };
 
@@ -46,7 +47,12 @@ export default function UsingEventsWindowTab(props: TabPanelProps) {
   };
 
   return (
-    <TabPanel {...props} sourceCode={<></>}>
+    <TabPanel
+      {...props}
+      sourceCode={
+        <Source relativePahToCodeFile="screens/Window/UsingEventsWindow/Tab.tsx" />
+      }
+    >
       <DemoButton onClick={showDemo} />
       {win && isVisible && <FocusButton onClick={focusWindow} />}
     </TabPanel>

@@ -1,5 +1,5 @@
-import { BrowserWindow, remote } from 'electron';
 import React from 'react';
+import { BrowserWindow, remote } from 'electron';
 
 import Button from '@material-ui/core/Button';
 

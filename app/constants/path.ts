@@ -1,3 +1,5 @@
 const appPath = `${__dirname}`;
 
-export default appPath;
+export default function path(p: string) {
+  return `${appPath}/${p}`;
+}

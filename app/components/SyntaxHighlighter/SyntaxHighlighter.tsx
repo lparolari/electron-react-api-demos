@@ -1,8 +1,6 @@
 import { existsSync, readFileSync } from 'fs';
 import React from 'react';
 import ReactSyntaxHighlighter from 'react-syntax-highlighter';
-import a11yDark from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-dark';
-import a11yLight from 'react-syntax-highlighter/dist/esm/styles/hljs/a11y-light';
 
 export type Theme = 'light' | 'dark';
 
@@ -11,11 +9,10 @@ export type Props = React.ComponentProps<typeof ReactSyntaxHighlighter> & {
   style?: unknown;
 };
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function getStyle(theme?: Theme): unknown {
-  // default
-  if (!theme) return a11yDark;
-  if (theme === 'dark') return a11yDark;
-  return a11yLight;
+  // FIXME: find a dark theme that works with jsx/tsx.
+  return undefined;
 }
 
 export function getCodeStrngFromPath(path: string): string {
@@ -32,7 +29,7 @@ export function getCodeStrngFromPath(path: string): string {
 export default function SyntaxHighlighter({ code, style, ...rest }: Props) {
   return (
     <ReactSyntaxHighlighter
-      language="typescript"
+      language="tsx"
       style={style}
       showLineNumbers
       {...rest}

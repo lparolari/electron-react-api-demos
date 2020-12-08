@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import TabPanel from '../../../components/TabPanel/TabPanel';
 import routes from '../../../constants/routes';
 import url from '../../../constants/url';
+import Source from '../Source';
 import DemoButton from './DemoButton';
 import Show from './Show';
 
@@ -36,7 +37,12 @@ export default function ManagedWindowTab(props: TabPanelProps) {
   };
 
   return (
-    <TabPanel {...props} sourceCode={<></>}>
+    <TabPanel
+      {...props}
+      sourceCode={
+        <Source relativePahToCodeFile="app/screens/Window/ManagedWindow/DemoButton.tsx" />
+      }
+    >
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <DemoButton onClick={handleClick} />
