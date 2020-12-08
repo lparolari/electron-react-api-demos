@@ -22,18 +22,6 @@ import FeaturesMenu from './FeaturesMenu';
 import MainMenu from './MainMenu';
 import OptionsMenu from './OptionsMenu';
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>
-      {new Date().getFullYear()}.
-    </Typography>
-  );
-}
-
 const drawerWidth = 240;
 
 const useStyles = makeStyles((theme) => ({
@@ -174,12 +162,7 @@ export default function App({ children }: Props) {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        <div className={classes.container}>
-          {children}
-          <Box pt={4}>
-            <Copyright />
-          </Box>
-        </div>
+        <div className={classes.container}>{children}</div>
       </main>
     </div>
   );
