@@ -5,10 +5,10 @@ import { Switch, Route } from 'react-router-dom';
 import routes from './constants/routes';
 import App from './containers/App/App';
 import HomePage from './screens/HomeScreen';
-import ManagedWindow from './screens/Window/ManagedWindow';
+import ManagedWindow from './screens/Window/ManagedWindow/Window';
 import NewBorderlessWindow from './screens/Window/NewFramelessWindow/Window';
 import NewWindow from './screens/Window/NewWindow/Window';
-import UsingEventsWindow from './screens/Window/UsingEventsWindow';
+import UsingEventsWindow from './screens/Window/UsingEventsWindow/Window';
 
 // Lazily load routes and code split with webpack
 const LazyWindowScreen = React.lazy(() =>
