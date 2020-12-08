@@ -18,9 +18,10 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import MenuIcon from '@material-ui/icons/Menu';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 
-import MainMenu from './MainMenu';
-import SecondaryMenu from './SecondaryMenu';
 import { routeName } from '../../constants/routes';
+import FeaturesMenu from './FeaturesMenu';
+import MainMenu from './MainMenu';
+import OptionsMenu from './OptionsMenu';
 
 function Copyright() {
   return (
@@ -169,10 +170,11 @@ export default function App({ children }: Props) {
             <ChevronLeftIcon />
           </IconButton>
         </div>
-        <Divider />
         <MainMenu />
         <Divider />
-        <SecondaryMenu />
+        <FeaturesMenu />
+        <Divider />
+        <OptionsMenu />
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />

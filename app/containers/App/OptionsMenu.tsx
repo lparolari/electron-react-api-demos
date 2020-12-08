@@ -7,7 +7,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
-export default function SecondaryMenu() {
+export default function OptionsMenu() {
   return (
     <List>
       <ListSubheader inset>Saved reports</ListSubheader>
