@@ -6,13 +6,22 @@ import App from './containers/App/App';
 import HomePage from './screens/HomeScreen';
 
 // Lazily load routes and code split with webpack
-const LazyCounterPage = React.lazy(() =>
-  import(/* webpackChunkName: "CounterPage" */ './screens/CounterScreen')
+const LazyWindowScreen = React.lazy(() =>
+  import(/* webpackChunkName: "WindowScreen" */ './screens/WindowScreen')
+);
+const LazyMenuScreen = React.lazy(() =>
+  import(/* webpackChunkName: "MenuScreen" */ './screens/MenuScreen')
 );
 
-const CounterPage = (props: Record<string, unknown>) => (
+const LazyWindow = (props: Record<string, unknown>) => (
   <React.Suspense fallback={<h1>Loading...</h1>}>
-    <LazyCounterPage {...props} />
+    <LazyWindowScreen {...props} />
+  </React.Suspense>
+);
+
+const LazyMenu = (props: Record<string, unknown>) => (
+  <React.Suspense fallback={<h1>Loading...</h1>}>
+    <LazyMenuScreen {...props} />
   </React.Suspense>
 );
 
@@ -20,8 +29,9 @@ export default function Routes() {
   return (
     <App>
       <Switch>
-        <Route path={routes.COUNTER} component={CounterPage} />
-        <Route path={routes.HOME} component={HomePage} />
+        <Route exact path={routes.HOME} component={HomePage} />
+        <Route exact path={routes.WINDOW} component={LazyWindow} />
+        <Route exact path={routes.MENU} component={LazyMenu} />
       </Switch>
     </App>
   );

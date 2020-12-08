@@ -5,5 +5,5 @@ import routes from '../constants/routes';
 import Dashboard from './Dashboard/Dashboard';
 
 export default function Home(): JSX.Element {
-  return <Typography>Hello</Typography>;
+  return <Typography>Hello3</Typography>;
 }
