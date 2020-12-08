@@ -12,7 +12,7 @@ import routes from '../../constants/routes';
 export default function FeaturesMenu() {
   return (
     <List>
-      <Link to={routes.HOME}>
+      <Link to={routes().home()}>
         <ListItem button>
           <ListItemIcon>
             <DashboardIcon />

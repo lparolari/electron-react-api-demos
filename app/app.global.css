@@ -6,9 +6,9 @@
 
 body {
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: hsl(0, 0%, 98%);
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 a {

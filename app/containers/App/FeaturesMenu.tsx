@@ -19,7 +19,7 @@ export default function FeaturesMenu() {
   return (
     <List>
       <ListSubheader inset>Caratteristiche</ListSubheader>
-      <Link to={routes.WINDOW}>
+      <Link to={routes().window().main()}>
         <ListItem button>
           <ListItemIcon>
             <OpenInNewIcon />
@@ -27,7 +27,7 @@ export default function FeaturesMenu() {
           <ListItemText primary="Finestre" />
         </ListItem>
       </Link>
-      <Link to={routes.MENU}>
+      <Link to={routes().menu()}>
         <ListItem button>
           <ListItemIcon>
             <ListIcon />
