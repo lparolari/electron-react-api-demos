@@ -1,7 +1,7 @@
 /* eslint react/jsx-props-no-spreading: off */
-import { Typography } from '@material-ui/core';
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import Backdrop from './components/Backdrop/Backdrop';
 import routes from './constants/routes';
 import App from './containers/App/App';
 import HomePage from './screens/HomeScreen';
@@ -21,13 +21,13 @@ const LazyMenuScreen = React.lazy(() =>
 const HomeScreen = (props: Record<string, unknown>) => <HomePage {...props} />;
 
 const LazyWindow = (props: Record<string, unknown>) => (
-  <React.Suspense fallback={<Typography>Loading...</Typography>}>
+  <React.Suspense fallback={<Backdrop />}>
     <LazyWindowScreen {...props} />
   </React.Suspense>
 );
 
 const LazyMenu = (props: Record<string, unknown>) => (
-  <React.Suspense fallback={<Typography>Loading...</Typography>}>
+  <React.Suspense fallback={<Backdrop />}>
     <LazyMenuScreen {...props} />
   </React.Suspense>
 );
