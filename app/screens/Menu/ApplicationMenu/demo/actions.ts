@@ -1,22 +1,15 @@
-import { ipcRenderer, remote, shell } from 'electron';
+import { remote, shell } from 'electron';
 
-export function registerInfoDialogListener() {
-  remote.ipcMain.once('open-information-dialog', () => {
-    const options = {
-      type: 'info',
-      title: 'Informazione',
-      message:
-        "Il menu è uno strumento molto potente e può essere personalizzato per offire all'utente un'esperienza personalizzata e ricca",
-      buttons: ['OK'],
-    };
-    remote.dialog.showMessageBox(remote.getCurrentWindow(), options);
+export function openInfoDialog() {
+  remote.dialog.showMessageBox({
+    type: 'info',
+    title: 'Informazione',
+    message:
+      "Il menu è uno strumento molto potente e può essere personalizzato per offire all'utente un'esperienza personalizzata e ricca",
+    buttons: ['OK'],
   });
 }
 
-export function openInfoDialog() {
-  ipcRenderer.send('open-information-dialog');
-}
-
-export function openMenuDoc() {
+export function openExternalDocs() {
   shell.openExternal('https://www.electronjs.org/docs/api/menu');
 }
