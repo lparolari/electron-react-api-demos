@@ -11,7 +11,7 @@ import SyntaxHighlighter, {
 
 const useStyles = makeStyles(() => ({
   highlighterFixedHeight: {
-    height: '280px',
+    maxHeight: '280px',
   },
 }));
 
