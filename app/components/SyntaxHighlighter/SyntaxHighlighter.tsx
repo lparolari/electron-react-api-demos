@@ -2,10 +2,6 @@ import { existsSync, readFileSync } from 'fs';
 import React from 'react';
 import ReactSyntaxHighlighter from 'react-syntax-highlighter';
 
-import Typography from '@material-ui/core/Typography';
-import SentimentDissatisfiedIcon from '@material-ui/icons/SentimentDissatisfied';
-import { Grid } from '@material-ui/core';
-
 export type Theme = 'light' | 'dark';
 
 export type Props = React.ComponentProps<typeof ReactSyntaxHighlighter> & {
@@ -14,7 +10,7 @@ export type Props = React.ComponentProps<typeof ReactSyntaxHighlighter> & {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function getStyle(theme?: Theme): unknown {
+export function getStyle(_theme?: Theme): unknown {
   // FIXME: find a dark theme that works with jsx/tsx.
   return undefined;
 }
