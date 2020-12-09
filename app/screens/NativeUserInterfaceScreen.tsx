@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 
 import PaddedContainer from '../components/Container/Container';
 import ExternalUrl from '../components/ExternalUrl/ExternalUrl';
+import NotificationTabs from './NativeUserInterface/Notification/Tabs';
 import OpenExternalTabs from './NativeUserInterface/OpenExternal/Tabs';
 
 export default function NativeUserInterfaceScreen() {
@@ -28,6 +29,12 @@ export default function NativeUserInterfaceScreen() {
               Risorse esterne
             </Typography>
             <OpenExternalTabs />
+          </Grid>
+          <Grid item xs={12}>
+            <Typography gutterBottom variant="h6">
+              Notifiche
+            </Typography>
+            <NotificationTabs />
           </Grid>
         </Grid>
       </Grid>
