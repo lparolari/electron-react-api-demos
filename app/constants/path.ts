@@ -1,5 +1,7 @@
+import { join } from 'path';
+
 const appPath = `${__dirname}`;
 
 export default function path(p: string) {
-  return `${appPath}/${p}`;
+  return join(appPath, p);
 }
