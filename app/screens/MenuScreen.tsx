@@ -11,6 +11,7 @@ import PaddedContainer from '../components/Container/Container';
 import ExternalUrl from '../components/ExternalUrl/ExternalUrl';
 import ApplicationMenuTab from './Menu/ApplicationMenu/ApplicationMenuTab';
 import ContextMenuTab from './Menu/ContextMenu/ContextMenuTab';
+import KeyboardShortcutTab from './Menu/KeyboardShortcut/KeyboardShortcutTab';
 
 export default function MenuScreen() {
   const [tab, setTab] = useState(0);
@@ -43,10 +44,12 @@ export default function MenuScreen() {
               <Tabs value={tab} onChange={handleTabSelect}>
                 <Tab label="Menu applicazione" />
                 <Tab label="Menu contestuale" />
+                <Tab label="Scorciatoie da tastiera" />
               </Tabs>
             </AppBar>
             <ApplicationMenuTab value={tab} index={0} />
             <ContextMenuTab value={tab} index={1} />
+            <KeyboardShortcutTab value={tab} index={2} />
           </Paper>
         </Grid>
       </Grid>
