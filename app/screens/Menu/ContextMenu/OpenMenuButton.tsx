@@ -6,7 +6,7 @@ import openContextMenu from './demo/demo';
 
 export default function OpenMenuButton() {
   return (
-    <Button color="primary" onClick={openContextMenu}>
+    <Button variant="contained" color="primary" onClick={openContextMenu}>
       Apri menu contestuale
     </Button>
   );

@@ -1,6 +1,6 @@
 import { Menu, remote } from 'electron';
 
-function make(): Menu {
+function makeMenu(): Menu {
   const menu = new remote.Menu();
 
   const sep = new remote.MenuItem({ type: 'separator' });
@@ -21,6 +21,6 @@ function make(): Menu {
   return menu;
 }
 
-const menu = make();
+const menu = makeMenu();
 
 export default menu;
