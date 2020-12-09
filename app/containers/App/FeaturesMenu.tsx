@@ -35,12 +35,14 @@ export default function FeaturesMenu() {
           <ListItemText primary="Menu" />
         </ListItem>
       </Link>
-      <ListItem button>
-        <ListItemIcon>
-          <AirplayIcon />
-        </ListItemIcon>
-        <ListItemText primary="Interfaccia nativa" />
-      </ListItem>
+      <Link to={routes().nativeUI()}>
+        <ListItem button>
+          <ListItemIcon>
+            <AirplayIcon />
+          </ListItemIcon>
+          <ListItemText primary="Interfaccia nativa" />
+        </ListItem>
+      </Link>
       <ListItem button>
         <ListItemIcon>
           <ChatBubbleIcon />

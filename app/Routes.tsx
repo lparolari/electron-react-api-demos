@@ -17,6 +17,11 @@ const LazyWindowScreen = React.lazy(() =>
 const LazyMenuScreen = React.lazy(() =>
   import(/* webpackChunkName: "MenuScreen" */ './screens/MenuScreen')
 );
+const LazyNativeUIScreen = React.lazy(() =>
+  import(
+    /* webpackChunkName: "NativeUserInterfaceScreen" */ './screens/NativeUserInterfaceScreen'
+  )
+);
 
 const HomeScreen = (props: Record<string, unknown>) => <HomePage {...props} />;
 
@@ -32,11 +37,18 @@ const LazyMenu = (props: Record<string, unknown>) => (
   </React.Suspense>
 );
 
+const LazyNativeUI = (props: Record<string, unknown>) => (
+  <React.Suspense fallback={<Backdrop />}>
+    <LazyNativeUIScreen {...props} />
+  </React.Suspense>
+);
+
 const AppSwitch = () => (
   <Switch>
     <Route exact path={routes().home()} component={HomeScreen} />
     <Route exact path={routes().window().main()} component={LazyWindow} />
     <Route exact path={routes().menu()} component={LazyMenu} />
+    <Route exact path={routes().nativeUI()} component={LazyNativeUI} />
   </Switch>
 );
 
