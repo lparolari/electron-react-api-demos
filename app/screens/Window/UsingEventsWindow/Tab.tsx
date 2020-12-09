@@ -1,12 +1,12 @@
 import { BrowserWindow, remote } from 'electron';
 import React, { useEffect, useState } from 'react';
 
+import DemoSource from '../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../components/TabPanel/TabPanel';
 import routes from '../../../constants/routes';
 import url from '../../../constants/url';
 import DemoButton from './DemoButton';
 import FocusButton from './FocusButton';
-import Source from '../Source';
 
 type TabPanelProps = { value: number; index: number };
 
@@ -50,7 +50,7 @@ export default function UsingEventsWindowTab(props: TabPanelProps) {
     <TabPanel
       {...props}
       sourceCode={
-        <Source relativePahToCodeFile="screens/Window/UsingEventsWindow/Tab.tsx" />
+        <DemoSource relativePahToCodeFile="screens/Window/UsingEventsWindow/Tab.tsx" />
       }
     >
       <DemoButton onClick={showDemo} />

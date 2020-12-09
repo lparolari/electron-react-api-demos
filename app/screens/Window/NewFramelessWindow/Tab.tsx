@@ -1,7 +1,7 @@
 import React from 'react';
 
+import DemoSource from '../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../components/TabPanel/TabPanel';
-import Source from '../Source';
 import DemoButton from './DemoButton';
 
 type TabPanelProps = { value: number; index: number };
@@ -11,7 +11,7 @@ export default function NewFramelessWindowTab(props: TabPanelProps) {
     <TabPanel
       {...props}
       sourceCode={
-        <Source relativePahToCodeFile="screens/Window/NewFramelessWindow/DemoButton.tsx" />
+        <DemoSource relativePahToCodeFile="screens/Window/NewFramelessWindow/DemoButton.tsx" />
       }
     >
       <DemoButton />

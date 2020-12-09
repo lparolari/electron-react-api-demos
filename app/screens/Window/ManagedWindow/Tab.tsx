@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 
 import Grid from '@material-ui/core/Grid';
 
+import DemoSource from '../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../components/TabPanel/TabPanel';
 import routes from '../../../constants/routes';
 import url from '../../../constants/url';
-import Source from '../Source';
 import DemoButton from './DemoButton';
 import Show from './Show';
 
@@ -40,7 +40,7 @@ export default function ManagedWindowTab(props: TabPanelProps) {
     <TabPanel
       {...props}
       sourceCode={
-        <Source relativePahToCodeFile="app/screens/Window/ManagedWindow/DemoButton.tsx" />
+        <DemoSource relativePahToCodeFile="app/screens/Window/ManagedWindow/DemoButton.tsx" />
       }
     >
       <Grid container spacing={3}>
