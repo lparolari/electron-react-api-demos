@@ -5,7 +5,7 @@ import Typography from '@material-ui/core/Typography';
 
 import PaddedContainer from '../components/Container/Container';
 import ExternalUrl from '../components/ExternalUrl/ExternalUrl';
-import InfoTab from './System/Tabs';
+import SystemTabs from './System/Tabs';
 
 export default function SystemScreen() {
   return (
@@ -22,10 +22,8 @@ export default function SystemScreen() {
             .
           </Typography>
         </Grid>
-        <Grid item xs={12} container spacing={3}>
-          <Grid item xs={12}>
-            <InfoTab />
-          </Grid>
+        <Grid item xs={12}>
+          <SystemTabs />
         </Grid>
       </Grid>
     </PaddedContainer>
