@@ -27,6 +27,9 @@ const LazyCommunicationScreen = React.lazy(() =>
     /* webpackChunkName: "CommunicationScreen" */ './screens/CommunicationScreen'
   )
 );
+const LazySystemScreen = React.lazy(() =>
+  import(/* webpackChunkName: "SystemScreen" */ './screens/SystemScreen')
+);
 
 const HomeScreen = (props: Record<string, unknown>) => <HomePage {...props} />;
 
@@ -54,6 +57,12 @@ const LazyCommunication = (props: Record<string, unknown>) => (
   </Suspense>
 );
 
+const LazySystem = (props: Record<string, unknown>) => (
+  <Suspense>
+    <LazySystemScreen {...props} />
+  </Suspense>
+);
+
 const AppSwitch = () => (
   <Switch>
     <Route exact path={routes().home()} component={HomeScreen} />
@@ -65,6 +74,7 @@ const AppSwitch = () => (
       path={routes().communication()}
       component={LazyCommunication}
     />
+    <Route exact path={routes().system()} component={LazySystem} />
   </Switch>
 );
 

@@ -51,12 +51,14 @@ export default function FeaturesMenu() {
           <ListItemText primary="Comunicazione" />
         </ListItem>
       </Link>
-      <ListItem button>
-        <ListItemIcon>
-          <SpeedIcon />
-        </ListItemIcon>
-        <ListItemText primary="Sistema" />
-      </ListItem>
+      <Link to={routes().system()}>
+        <ListItem button>
+          <ListItemIcon>
+            <SpeedIcon />
+          </ListItemIcon>
+          <ListItemText primary="Sistema" />
+        </ListItem>
+      </Link>
       <ListItem button>
         <ListItemIcon>
           <WallpaperIcon />

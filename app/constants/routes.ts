@@ -11,6 +11,7 @@ export default function routes() {
     menu: () => '/menu',
     nativeUI: () => '/native-ui',
     communication: () => '/communication',
+    system: () => '/system',
   };
 }
 
