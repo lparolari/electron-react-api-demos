@@ -22,6 +22,11 @@ const LazyNativeUIScreen = React.lazy(() =>
     /* webpackChunkName: "NativeUserInterfaceScreen" */ './screens/NativeUserInterfaceScreen'
   )
 );
+const LazyCommunicationScreen = React.lazy(() =>
+  import(
+    /* webpackChunkName: "CommunicationScreen" */ './screens/CommunicationScreen'
+  )
+);
 
 const HomeScreen = (props: Record<string, unknown>) => <HomePage {...props} />;
 
@@ -43,12 +48,23 @@ const LazyNativeUI = (props: Record<string, unknown>) => (
   </Suspense>
 );
 
+const LazyCommunication = (props: Record<string, unknown>) => (
+  <Suspense>
+    <LazyCommunicationScreen {...props} />
+  </Suspense>
+);
+
 const AppSwitch = () => (
   <Switch>
     <Route exact path={routes().home()} component={HomeScreen} />
     <Route exact path={routes().window().main()} component={LazyWindow} />
     <Route exact path={routes().menu()} component={LazyMenu} />
     <Route exact path={routes().nativeUI()} component={LazyNativeUI} />
+    <Route
+      exact
+      path={routes().communication()}
+      component={LazyCommunication}
+    />
   </Switch>
 );
 

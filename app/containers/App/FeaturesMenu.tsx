@@ -43,12 +43,14 @@ export default function FeaturesMenu() {
           <ListItemText primary="Interfaccia nativa" />
         </ListItem>
       </Link>
-      <ListItem button>
-        <ListItemIcon>
-          <ChatBubbleIcon />
-        </ListItemIcon>
-        <ListItemText primary="Comunicazione" />
-      </ListItem>
+      <Link to={routes().communication()}>
+        <ListItem button>
+          <ListItemIcon>
+            <ChatBubbleIcon />
+          </ListItemIcon>
+          <ListItemText primary="Comunicazione" />
+        </ListItem>
+      </Link>
       <ListItem button>
         <ListItemIcon>
           <SpeedIcon />

@@ -10,6 +10,7 @@ export default function routes() {
     }),
     menu: () => '/menu',
     nativeUI: () => '/native-ui',
+    communication: () => '/communication',
   };
 }
 
@@ -18,7 +19,7 @@ export function routeName(r: string) {
   if (r === routes().window().main()) return 'Finestre';
   if (r === routes().menu()) return 'Menu';
   if (r === routes().nativeUI()) return 'Interfaccia nativa';
-  // if (r === communication) return 'Comunicazione';
+  if (r === routes().communication()) return 'Comunicazione';
   // if (r === system) return 'Sistema';
   // if (r === media) return 'Media';
 
