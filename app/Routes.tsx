@@ -1,7 +1,7 @@
 /* eslint react/jsx-props-no-spreading: off */
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Backdrop from './components/Backdrop/Backdrop';
+import Suspense from './components/Suspense/Suspense';
 import routes from './constants/routes';
 import App from './containers/App/App';
 import HomePage from './screens/HomeScreen';
@@ -26,21 +26,21 @@ const LazyNativeUIScreen = React.lazy(() =>
 const HomeScreen = (props: Record<string, unknown>) => <HomePage {...props} />;
 
 const LazyWindow = (props: Record<string, unknown>) => (
-  <React.Suspense fallback={<Backdrop />}>
+  <Suspense>
     <LazyWindowScreen {...props} />
-  </React.Suspense>
+  </Suspense>
 );
 
 const LazyMenu = (props: Record<string, unknown>) => (
-  <React.Suspense fallback={<Backdrop />}>
+  <Suspense>
     <LazyMenuScreen {...props} />
-  </React.Suspense>
+  </Suspense>
 );
 
 const LazyNativeUI = (props: Record<string, unknown>) => (
-  <React.Suspense fallback={<Backdrop />}>
+  <Suspense>
     <LazyNativeUIScreen {...props} />
-  </React.Suspense>
+  </Suspense>
 );
 
 const AppSwitch = () => (
