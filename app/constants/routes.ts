@@ -21,7 +21,7 @@ export function routeName(r: string) {
   if (r === routes().menu()) return 'Menu';
   if (r === routes().nativeUI()) return 'Interfaccia nativa';
   if (r === routes().communication()) return 'Comunicazione';
-  // if (r === system) return 'Sistema';
+  if (r === routes().system()) return 'Sistema';
   // if (r === media) return 'Media';
 
   return 'Route not found';

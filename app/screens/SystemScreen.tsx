@@ -1,7 +1,33 @@
 import React from 'react';
 
-import { Typography } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
+import PaddedContainer from '../components/Container/Container';
+import ExternalUrl from '../components/ExternalUrl/ExternalUrl';
+import InfoTab from './System/Tabs';
 
 export default function SystemScreen() {
-  return <Typography>System page</Typography>;
+  return (
+    <PaddedContainer>
+      <Grid container spacing={3}>
+        <Grid item xs={12}>
+          <Typography paragraph>TODO</Typography>
+          <Typography paragraph>TODO</Typography>
+          <Typography paragraph>
+            Vedi la{' '}
+            <ExternalUrl url={new URL('http://a.com')}>
+              documentazione ufficiale
+            </ExternalUrl>
+            .
+          </Typography>
+        </Grid>
+        <Grid item xs={12} container spacing={3}>
+          <Grid item xs={12}>
+            <InfoTab />
+          </Grid>
+        </Grid>
+      </Grid>
+    </PaddedContainer>
+  );
 }
