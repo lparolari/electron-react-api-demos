@@ -25,12 +25,12 @@ export default function CopyPasteTab({ value, index }: Props) {
     >
       <Grid container spacing={1}>
         <Grid item>
-          <Button color="primary" onClick={handleCopy}>
+          <Button color="primary" variant="contained" onClick={handleCopy}>
             Copia
           </Button>
         </Grid>
         <Grid item>
-          <Button color="primary" onClick={handlePaste}>
+          <Button color="primary" variant="contained" onClick={handlePaste}>
             Incolla
           </Button>
         </Grid>
