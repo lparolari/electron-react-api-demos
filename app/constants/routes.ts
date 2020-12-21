@@ -12,6 +12,7 @@ export default function routes() {
     nativeUI: () => '/native-ui',
     communication: () => '/communication',
     system: () => '/system',
+    media: () => '/media',
   };
 }
 
@@ -22,7 +23,7 @@ export function routeName(r: string) {
   if (r === routes().nativeUI()) return 'Interfaccia nativa';
   if (r === routes().communication()) return 'Comunicazione';
   if (r === routes().system()) return 'Sistema';
-  // if (r === media) return 'Media';
+  if (r === routes().media()) return 'Media';
 
   return 'Route not found';
 }
