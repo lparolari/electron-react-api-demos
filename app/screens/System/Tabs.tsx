@@ -6,6 +6,7 @@ import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 import InfoTab from './InfoTab/Tab';
 import CopyPasteTab from './CopyPasteTab/Tab';
+import ProtocolHandlerTab from './ProtocolHandlerTab/Tab';
 
 export default function SystemTabs() {
   const [tab, setTab] = React.useState(0);
@@ -18,11 +19,13 @@ export default function SystemTabs() {
         <Tabs value={tab} onChange={handleTabSelect}>
           <Tab label="Info app e sistema" />
           <Tab label="Copia &amp; Incolla" />
+          <Tab label="Protocol Handler" />
         </Tabs>
       </AppBar>
 
       <InfoTab value={tab} index={0} />
       <CopyPasteTab value={tab} index={1} />
+      <ProtocolHandlerTab value={tab} index={2} />
     </Paper>
   );
 }
