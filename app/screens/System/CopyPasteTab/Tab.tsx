@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 
-import { Button, TextField } from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
 
-import DemoSource from '../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../components/TabPanel/TabPanel';
+import CopyButton from './Copy';
 import { copy, paste } from './demo/demo';
+import Doc from './Doc';
+import PasteButton from './Paste';
+import Source from './Source';
 
 export type Props = { value: number; index: number };
 
@@ -19,20 +22,15 @@ export default function CopyPasteTab({ value, index }: Props) {
     <TabPanel
       value={value}
       index={index}
-      sourceCode={
-        <DemoSource relativePahToCodeFile="screens/System/CopyPasteTab/demo/demo.ts" />
-      }
+      sourceCode={<Source />}
+      documentation={<Doc />}
     >
       <Grid container spacing={1}>
         <Grid item>
-          <Button color="primary" variant="contained" onClick={handleCopy}>
-            Copia
-          </Button>
+          <CopyButton onClick={handleCopy} />
         </Grid>
         <Grid item>
-          <Button color="primary" variant="contained" onClick={handlePaste}>
-            Incolla
-          </Button>
+          <PasteButton onClick={handlePaste} />
         </Grid>
         <Grid item>
           <TextField
