@@ -2,10 +2,10 @@ import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
 
-import DemoSource from '../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../components/TabPanel/TabPanel';
-
+import Doc from './Doc';
 import Info from './Info';
+import Source from './Source';
 
 export type Props = { value: number; index: number };
 
@@ -14,9 +14,8 @@ export default function InfoTab({ value, index }: Props) {
     <TabPanel
       value={value}
       index={index}
-      sourceCode={
-        <DemoSource relativePahToCodeFile="screens/Menu/ApplicationMenu/demo/demo.ts" />
-      }
+      sourceCode={<Source />}
+      documentation={<Doc />}
     >
       <Grid container spacing={1}>
         <Grid item>

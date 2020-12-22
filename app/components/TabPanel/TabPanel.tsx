@@ -11,7 +11,7 @@ export interface Props {
   index: number;
   value: number;
   sourceCode?: React.ReactNode;
-  documentation: React.ReactNode;
+  documentation?: React.ReactNode;
 }
 
 export default function TabPanel(props: Props) {
