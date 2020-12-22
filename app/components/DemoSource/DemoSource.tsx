@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core';
 import path from '../../constants/path';
 import SyntaxHighlighter, {
   getCodeStrngFromPath,
+  getDisplayableCode,
   getStyle,
 } from '../SyntaxHighlighter/SyntaxHighlighter';
 
@@ -24,7 +25,10 @@ export default function DemoSource({ relativePahToCodeFile }: Props) {
 
   return (
     <SyntaxHighlighter
-      code={getCodeStrngFromPath(path(relativePahToCodeFile))}
+      code={getDisplayableCode(
+        relativePahToCodeFile,
+        getCodeStrngFromPath(path(relativePahToCodeFile))
+      )}
       style={getStyle('dark')}
       className={clsx(classes.highlighterFixedHeight)}
     />

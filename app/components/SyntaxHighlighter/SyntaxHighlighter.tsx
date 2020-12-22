@@ -26,6 +26,11 @@ export function getCodeStrngFromPath(path: string): string | undefined {
   return readFileSync(path, 'utf8');
 }
 
+export function getDisplayableCode(filename: string, code: string | undefined) {
+  if (!code) return undefined;
+  return `// ${filename}\n\n${code}`;
+}
+
 export default function SyntaxHighlighter({ code, style, ...rest }: Props) {
   if (!code) {
     return (

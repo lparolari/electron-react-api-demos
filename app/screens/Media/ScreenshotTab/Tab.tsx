@@ -18,7 +18,10 @@ export default function ScreenshotTab({ value, index }: Props) {
       value={value}
       index={index}
       sourceCode={
-        <DemoSource relativePahToCodeFile="screens/Media/ScreenshotTab/demo/demo.ts" />
+        <>
+          <DemoSource relativePahToCodeFile="screens/Media/ScreenshotTab/demo/demo.ts" />
+          <DemoSource relativePahToCodeFile="screens/Media/ScreenshotTab/Tab.tsx" />
+        </>
       }
     >
       <Grid container spacing={1}>

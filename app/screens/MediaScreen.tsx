@@ -12,11 +12,36 @@ export default function MediaScreen() {
     <PaddedContainer>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Typography paragraph>TODO</Typography>
-          <Typography paragraph>TODO</Typography>
+          <Typography paragraph>
+            Per catturare delle schermate Electron.js fornisce il metodo{' '}
+            <code>caputrePage</code> invocabile su un oggetto{' '}
+            <code>webContents</code>. L&apos;immagine restituita è salvabile in
+            diversi formati e codifiche.
+          </Typography>
+          <Typography paragraph>
+            Attenzione: è possibile utilizzare{' '}
+            <code>dialog.showSaveDialog</code> per chiedere all&apos;utente il
+            path dove salvare lo screenshot. (
+            <ExternalUrl
+              url={
+                new URL(
+                  'https://www.electronjs.org/docs/api/dialog#dialogshowsavedialogbrowserwindow-options'
+                )
+              }
+            >
+              doc
+            </ExternalUrl>
+            )
+          </Typography>
           <Typography paragraph>
             Vedi la{' '}
-            <ExternalUrl url={new URL('http://a.com')}>
+            <ExternalUrl
+              url={
+                new URL(
+                  'https://www.electronjs.org/docs/api/web-contents#contentscapturepagerect'
+                )
+              }
+            >
               documentazione ufficiale
             </ExternalUrl>
             .
