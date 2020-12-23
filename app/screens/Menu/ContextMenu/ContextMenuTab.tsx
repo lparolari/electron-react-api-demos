@@ -3,6 +3,7 @@ import React from 'react';
 
 import DemoSource from '../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../components/TabPanel/TabPanel';
+import Doc from './Doc';
 import OpenMenuButton from './OpenMenuButton';
 import RegisterRightClickButton from './RegisterRightClickButton';
 
@@ -16,6 +17,7 @@ export default function ContextMenuTab({ value, index }: Props) {
       sourceCode={
         <DemoSource relativePahToCodeFile="screens/Menu/ContextMenu/demo/demo.ts" />
       }
+      documentation={<Doc />}
     >
       <Grid container spacing={1}>
         <Grid item>

@@ -21,24 +21,6 @@ export default function MenuScreen() {
     <PaddedContainer>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Typography paragraph>
-            Il modulo <code>Menu</code> e <code>MenuItem</code> possono essere
-            usati per creare menu nativi personalizzati.
-          </Typography>
-          <Typography paragraph>
-            Sono disponibili due tipi di menu: il menu dell&apos;applicazione
-            sulla barra in alto, oppure il menu contestuale, accessibile tramite
-            tasto destro del mouse.
-          </Typography>
-          <Typography>
-            Vedi la{' '}
-            <ExternalUrl url={new URL('http://electron.atom.io/docs/api/menu')}>
-              documentazione ufficiale
-            </ExternalUrl>
-            .
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
           <Paper>
             <AppBar position="static" color="transparent">
               <Tabs value={tab} onChange={handleTabSelect}>

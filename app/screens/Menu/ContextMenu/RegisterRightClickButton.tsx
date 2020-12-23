@@ -7,7 +7,7 @@ import { registerRightClickListener } from './demo/demo';
 export default function RegisterRightClickButton() {
   return (
     <Button
-      variant="contained"
+      variant="outlined"
       color="primary"
       onClick={registerRightClickListener}
     >
