@@ -6,7 +6,7 @@ function addProtocolHandler() {
   remote.app.setAsDefaultProtocolClient('electron-demo-react');
 
   remote.app.on('open-url', (_, url) => {
-    dialog.showErrorBox('Welcome Back', `You arrived from: ${url}`);
+    dialog.showErrorBox('Bentornato', `Sei arrivato dall'url ${url}`);
   });
 }
 
