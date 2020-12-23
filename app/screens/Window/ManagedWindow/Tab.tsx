@@ -9,6 +9,7 @@ import routes from '../../../constants/routes';
 import url from '../../../constants/url';
 import DemoButton from './DemoButton';
 import Show from './Show';
+import Doc from '../Doc';
 
 type TabPanelProps = { value: number; index: number };
 
@@ -42,6 +43,7 @@ export default function ManagedWindowTab(props: TabPanelProps) {
       sourceCode={
         <DemoSource relativePahToCodeFile="app/screens/Window/ManagedWindow/DemoButton.tsx" />
       }
+      documentation={<Doc />}
     >
       <Grid container spacing={3}>
         <Grid item xs={12}>

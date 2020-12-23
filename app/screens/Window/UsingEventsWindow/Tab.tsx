@@ -7,6 +7,7 @@ import DemoSource from '../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../components/TabPanel/TabPanel';
 import routes from '../../../constants/routes';
 import url from '../../../constants/url';
+import Doc from '../Doc';
 import DemoButton from './DemoButton';
 import FocusButton from './FocusButton';
 
@@ -54,6 +55,7 @@ export default function UsingEventsWindowTab(props: TabPanelProps) {
       sourceCode={
         <DemoSource relativePahToCodeFile="screens/Window/UsingEventsWindow/Tab.tsx" />
       }
+      documentation={<Doc />}
     >
       <Grid container spacing={1}>
         <Grid item>

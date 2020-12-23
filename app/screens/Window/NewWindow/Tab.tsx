@@ -1,7 +1,8 @@
 import React from 'react';
 
-import TabPanel from '../../../components/TabPanel/TabPanel';
 import DemoSource from '../../../components/DemoSource/DemoSource';
+import TabPanel from '../../../components/TabPanel/TabPanel';
+import Doc from '../Doc';
 import DemoButton from './DemoButton';
 
 type TabPanelProps = { value: number; index: number };
@@ -13,6 +14,7 @@ export default function NewWindowTab(props: TabPanelProps) {
       sourceCode={
         <DemoSource relativePahToCodeFile="screens/Window/NewWindow/DemoButton.tsx" />
       }
+      documentation={<Doc />}
     >
       <DemoButton />
     </TabPanel>
