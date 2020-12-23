@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import DemoSource from '../../../components/DemoSource/DemoSource';
+import ExternalUrl from '../../../components/ExternalUrl/ExternalUrl';
 import TabPanel from '../../../components/TabPanel/TabPanel';
 import captureScreenshot from './demo/demo';
 
@@ -21,6 +22,44 @@ export default function ScreenshotTab({ value, index }: Props) {
         <>
           <DemoSource relativePahToCodeFile="screens/Media/ScreenshotTab/demo/demo.ts" />
           <DemoSource relativePahToCodeFile="screens/Media/ScreenshotTab/Tab.tsx" />
+        </>
+      }
+      documentation={
+        <>
+          <Typography paragraph>
+            Per catturare delle schermate Electron.js fornisce il metodo{' '}
+            <code>caputrePage</code> invocabile su un oggetto{' '}
+            <code>webContents</code>. L&apos;immagine restituita è salvabile in
+            diversi formati e codifiche.
+          </Typography>
+          <Typography paragraph>
+            Attenzione: è possibile utilizzare{' '}
+            <code>dialog.showSaveDialog</code> per chiedere all&apos;utente il
+            path dove salvare lo screenshot. (
+            <ExternalUrl
+              url={
+                new URL(
+                  'https://www.electronjs.org/docs/api/dialog#dialogshowsavedialogbrowserwindow-options'
+                )
+              }
+            >
+              doc
+            </ExternalUrl>
+            )
+          </Typography>
+          <Typography paragraph>
+            Vedi la{' '}
+            <ExternalUrl
+              url={
+                new URL(
+                  'https://www.electronjs.org/docs/api/web-contents#contentscapturepagerect'
+                )
+              }
+            >
+              documentazione ufficiale
+            </ExternalUrl>
+            .
+          </Typography>
         </>
       }
     >
