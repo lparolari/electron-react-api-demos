@@ -23,12 +23,6 @@ export default function OpenExternalUrlTab({ value, index }: Props) {
         <Grid item xs={12}>
           <OpenArtemisHomepageButton />
         </Grid>
-        <Grid item>
-          <Typography>
-            Attenzione: è possibile aprire qualunque URL, a patto che il
-            relativo protocollo sia gestito dal sistema operativo.
-          </Typography>
-        </Grid>
       </Grid>
     </TabPanel>
   );
