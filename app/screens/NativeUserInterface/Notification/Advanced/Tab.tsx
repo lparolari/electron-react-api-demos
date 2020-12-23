@@ -3,6 +3,7 @@ import React from 'react';
 import DemoSource from '../../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../../components/TabPanel/TabPanel';
 import SendAdvancedNotificationButton from './Demo';
+import Doc from './Doc';
 
 export type Props = { value: number; index: number };
 
@@ -14,6 +15,7 @@ export default function AdvancedNotificationTab({ value, index }: Props) {
       sourceCode={
         <DemoSource relativePahToCodeFile="screens/NativeUserInterface/Notification/Advanced/demo/demo.ts" />
       }
+      documentation={<Doc />}
     >
       <SendAdvancedNotificationButton />
     </TabPanel>
