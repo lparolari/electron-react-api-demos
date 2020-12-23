@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
+import SecondaryDemoButton from '../../../components/DemoButton/Secondary';
 
-export type Props = React.ComponentProps<typeof Button>;
+export type Props = React.ComponentProps<typeof SecondaryDemoButton>;
 
 export default function MainListenerButton({ onClick, ...rest }: Props) {
   return (
-    <Button color="primary" variant="outlined" onClick={onClick} {...rest}>
+    <SecondaryDemoButton onClick={onClick} {...rest}>
       Aggiungi ping listener
-    </Button>
+    </SecondaryDemoButton>
   );
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Grid from '@material-ui/core/Grid';
+
 import DemoSource from '../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../components/TabPanel/TabPanel';
 import DemoButton from './DemoButton';
@@ -18,8 +20,14 @@ export default function ApplicationMenuTab({ value, index }: Props) {
       }
       documentation={<Doc />}
     >
-      <DemoButton />
-      <ResetButton />
+      <Grid container spacing={1}>
+        <Grid item>
+          <DemoButton />
+        </Grid>
+        <Grid item>
+          <ResetButton />
+        </Grid>
+      </Grid>
     </TabPanel>
   );
 }

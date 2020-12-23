@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
+import PrimaryDemoButton from '../../../components/DemoButton/Primary';
 
-export type Props = React.ComponentProps<typeof Button>;
+export type Props = React.ComponentProps<typeof PrimaryDemoButton>;
 
 export default function CopyButton({ onClick, ...rest }: Props) {
   return (
-    <Button color="primary" variant="contained" onClick={onClick} {...rest}>
+    <PrimaryDemoButton onClick={onClick} {...rest}>
       Copia
-    </Button>
+    </PrimaryDemoButton>
   );
 }

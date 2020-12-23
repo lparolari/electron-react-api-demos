@@ -1,8 +1,7 @@
-import React from 'react';
 import { BrowserWindow, remote } from 'electron';
+import React from 'react';
 
-import Button from '@material-ui/core/Button';
-
+import PrimaryDemoButton from '../../../components/DemoButton/Primary';
 import routes from '../../../constants/routes';
 import url from '../../../constants/url';
 
@@ -25,9 +24,7 @@ function buildMenu(win: BrowserWindow) {
 
 export default function DemoButton() {
   return (
-    <Button
-      variant="contained"
-      color="primary"
+    <PrimaryDemoButton
       onClick={() => {
         const win = new remote.BrowserWindow({
           width: 400,
@@ -44,6 +41,6 @@ export default function DemoButton() {
       }}
     >
       Crea finestra
-    </Button>
+    </PrimaryDemoButton>
   );
 }

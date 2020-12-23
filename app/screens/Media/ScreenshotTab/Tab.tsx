@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
+import PrimaryDemoButton from '../../../components/DemoButton/Primary';
 import DemoSource from '../../../components/DemoSource/DemoSource';
 import ExternalUrl from '../../../components/ExternalUrl/ExternalUrl';
 import TabPanel from '../../../components/TabPanel/TabPanel';
@@ -65,9 +65,7 @@ export default function ScreenshotTab({ value, index }: Props) {
     >
       <Grid container spacing={1}>
         <Grid item xs={12}>
-          <Button
-            color="primary"
-            variant="contained"
+          <PrimaryDemoButton
             onClick={() =>
               captureScreenshot().then((screenshotPath) =>
                 setScreenshotInfo(`Screenshot salvato in ${screenshotPath}`)
@@ -75,7 +73,7 @@ export default function ScreenshotTab({ value, index }: Props) {
             }
           >
             Cattura schermata
-          </Button>
+          </PrimaryDemoButton>
         </Grid>
         <Grid item xs={12}>
           <Typography>{screenshotInfo}</Typography>

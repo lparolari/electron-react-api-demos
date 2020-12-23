@@ -1,17 +1,12 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
-
+import PrimaryDemoButton from '../../../../components/DemoButton/Primary';
 import openUserHomeInFileManager from './demo/demo';
 
 export default function OpenUserHomeButton() {
   return (
-    <Button
-      variant="contained"
-      color="primary"
-      onClick={openUserHomeInFileManager}
-    >
+    <PrimaryDemoButton onClick={openUserHomeInFileManager}>
       Apri cartella home
-    </Button>
+    </PrimaryDemoButton>
   );
 }

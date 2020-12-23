@@ -1,17 +1,12 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
-
+import PrimaryDemoButton from '../../../../components/DemoButton/Primary';
 import openArtemisHomepageExternal from './demo/demo';
 
 export default function OpenArtemisHomepageButton() {
   return (
-    <Button
-      variant="contained"
-      color="primary"
-      onClick={openArtemisHomepageExternal}
-    >
+    <PrimaryDemoButton onClick={openArtemisHomepageExternal}>
       Apri google
-    </Button>
+    </PrimaryDemoButton>
   );
 }

@@ -1,17 +1,16 @@
 import { remote } from 'electron';
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
+import SecondaryDemoButton from '../../../components/DemoButton/Secondary';
 
 export default function ResetButton() {
   return (
-    <Button
-      color="primary"
+    <SecondaryDemoButton
       onClick={() =>
         remote.Menu.setApplicationMenu(remote.Menu.getApplicationMenu())
       }
     >
       Ripristina predefinito
-    </Button>
+    </SecondaryDemoButton>
   );
 }

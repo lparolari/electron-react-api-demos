@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
-
+import PrimaryDemoButton from '../../../../components/DemoButton/Primary';
 import sendBasicNotification from './demo/demo';
 
 export default function SendAdvancedNotificationButton() {
   return (
-    <Button variant="contained" color="primary" onClick={sendBasicNotification}>
+    <PrimaryDemoButton onClick={sendBasicNotification}>
       Invia notifica base
-    </Button>
+    </PrimaryDemoButton>
   );
 }

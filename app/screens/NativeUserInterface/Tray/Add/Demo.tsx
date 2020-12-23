@@ -1,13 +1,10 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
-
+import PrimaryDemoButton from '../../../../components/DemoButton/Primary';
 import addToTray from './demo/demo';
 
 export default function AddToTrayButton() {
   return (
-    <Button variant="contained" color="primary" onClick={addToTray}>
-      Aggiungi al tray
-    </Button>
+    <PrimaryDemoButton onClick={addToTray}>Aggiungi al tray</PrimaryDemoButton>
   );
 }

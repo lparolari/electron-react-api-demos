@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
+import SecondaryDemoButton from '../../../components/DemoButton/Secondary';
 
-export type Props = { onClick: () => void };
+export type Props = React.ComponentProps<typeof SecondaryDemoButton>;
 
-export default function FocusButton({ onClick }: Props) {
+export default function FocusButton({ onClick, ...rest }: Props) {
   return (
-    <Button color="secondary" onClick={onClick}>
+    <SecondaryDemoButton color="secondary" onClick={onClick} {...rest}>
       Riporta in primo piano
-    </Button>
+    </SecondaryDemoButton>
   );
 }

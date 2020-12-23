@@ -1,6 +1,8 @@
 import { BrowserWindow, remote } from 'electron';
 import React, { useEffect, useState } from 'react';
 
+import Grid from '@material-ui/core/Grid';
+
 import DemoSource from '../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../components/TabPanel/TabPanel';
 import routes from '../../../constants/routes';
@@ -53,8 +55,14 @@ export default function UsingEventsWindowTab(props: TabPanelProps) {
         <DemoSource relativePahToCodeFile="screens/Window/UsingEventsWindow/Tab.tsx" />
       }
     >
-      <DemoButton onClick={showDemo} />
-      {win && isVisible && <FocusButton onClick={focusWindow} />}
+      <Grid container spacing={1}>
+        <Grid item>
+          <DemoButton onClick={showDemo} />
+        </Grid>
+        <Grid item>
+          {win && isVisible && <FocusButton onClick={focusWindow} />}
+        </Grid>
+      </Grid>
     </TabPanel>
   );
 }

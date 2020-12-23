@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
+import PrimaryDemoButton from '../../../components/DemoButton/Primary';
 
-export type Props = React.ComponentProps<typeof Button>;
+export type Props = React.ComponentProps<typeof PrimaryDemoButton>;
 
 export default function PingButton({ onClick, ...rest }: Props) {
   return (
-    <Button variant="contained" color="primary" onClick={onClick} {...rest}>
+    <PrimaryDemoButton onClick={onClick} {...rest}>
       Ping
-    </Button>
+    </PrimaryDemoButton>
   );
 }

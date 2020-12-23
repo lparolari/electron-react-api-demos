@@ -1,9 +1,10 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
+import PrimaryDemoButton from '../../../components/DemoButton/Primary';
+import SecondaryDemoButton from '../../../components/DemoButton/Secondary';
 import DemoSource from '../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../components/TabPanel/TabPanel';
 import { addProtocolHandler, openExternalPage } from './demo/demo';
@@ -23,18 +24,14 @@ export default function ProtocolHandlerTab({ value, index }: Props) {
     >
       <Grid container spacing={1}>
         <Grid item>
-          <Button color="primary" onClick={addProtocolHandler}>
+          <SecondaryDemoButton onClick={addProtocolHandler}>
             Aggiungi protocol handler
-          </Button>
+          </SecondaryDemoButton>
         </Grid>
         <Grid item>
-          <Button
-            color="primary"
-            variant="contained"
-            onClick={openExternalPage}
-          >
+          <PrimaryDemoButton onClick={openExternalPage}>
             Apri demo
-          </Button>
+          </PrimaryDemoButton>
         </Grid>
         <Grid item>
           <Typography gutterBottom>

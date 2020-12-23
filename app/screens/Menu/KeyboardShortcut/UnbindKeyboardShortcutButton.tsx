@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Button from '@material-ui/core/Button';
-
+import SecondaryDemoButton from '../../../components/DemoButton/Secondary';
 import { unregisterDemoKeyboardShortcut } from './demo/demo';
 
 export default function UnbindKeyboardShortcutButton() {
   return (
-    <Button color="primary" onClick={unregisterDemoKeyboardShortcut}>
+    <SecondaryDemoButton onClick={unregisterDemoKeyboardShortcut}>
       Rimuovi binding shortcut
-    </Button>
+    </SecondaryDemoButton>
   );
 }
