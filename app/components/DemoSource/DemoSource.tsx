@@ -20,7 +20,7 @@ export type Props = {
   relativePahToCodeFile: string;
 };
 
-export default function DemoSource({ relativePahToCodeFile }: Props) {
+export default function DemoSource({ relativePahToCodeFile, ...rest }: Props) {
   const classes = useStyles();
 
   return (
@@ -31,6 +31,7 @@ export default function DemoSource({ relativePahToCodeFile }: Props) {
       )}
       style={getStyle('dark')}
       className={clsx(classes.highlighterFixedHeight)}
+      {...rest}
     />
   );
 }

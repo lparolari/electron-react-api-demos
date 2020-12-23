@@ -17,7 +17,7 @@ export default function FeaturesMenu() {
           <ListItemIcon>
             <DashboardIcon />
           </ListItemIcon>
-          <ListItemText primary="Dashboard" />
+          <ListItemText primary="Home" />
         </ListItem>
       </Link>
     </List>

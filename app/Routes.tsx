@@ -74,6 +74,7 @@ const LazyMedia = (props: Record<string, unknown>) => (
 
 const AppSwitch = () => (
   <Switch>
+    <Route exact path="/" component={HomeScreen} />
     <Route exact path={routes().home()} component={HomeScreen} />
     <Route exact path={routes().window().main()} component={LazyWindow} />
     <Route exact path={routes().menu()} component={LazyMenu} />
