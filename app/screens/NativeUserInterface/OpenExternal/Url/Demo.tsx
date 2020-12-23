@@ -11,7 +11,7 @@ export default function OpenArtemisHomepageButton() {
       color="primary"
       onClick={openArtemisHomepageExternal}
     >
-      Apri homepage programma Artemis
+      Apri google
     </Button>
   );
 }
