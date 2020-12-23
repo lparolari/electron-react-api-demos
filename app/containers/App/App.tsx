@@ -1,21 +1,20 @@
 import clsx from 'clsx';
+import { shell } from 'electron';
 import React from 'react';
 import { useLocation } from 'react-router';
 
 import AppBar from '@material-ui/core/AppBar';
-import Badge from '@material-ui/core/Badge';
-import Box from '@material-ui/core/Box';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
-import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import GithubIcon from '@material-ui/icons/GitHub';
+import HelpIcon from '@material-ui/icons/Help';
 import MenuIcon from '@material-ui/icons/Menu';
-import NotificationsIcon from '@material-ui/icons/Notifications';
 
 import { routeName } from '../../constants/routes';
 import FeaturesMenu from './FeaturesMenu';
@@ -135,10 +134,25 @@ export default function App({ children }: Props) {
           >
             {routeName(location.pathname)}
           </Typography>
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
+          <IconButton
+            color="inherit"
+            title="Electron.js Documentation"
+            onClick={() =>
+              shell.openExternal('https://www.electronjs.org/docs')
+            }
+          >
+            <HelpIcon />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            title="Electron Demo React source on GitHub"
+            onClick={() =>
+              shell.openExternal(
+                'https://github.com/lparolari/electron-react-api-demos'
+              )
+            }
+          >
+            <GithubIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
