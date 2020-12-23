@@ -15,9 +15,7 @@ export default function MessagesTabs() {
     <Paper>
       <AppBar position="static" color="transparent">
         <Tabs value={tab} onChange={handleTabSelect}>
-          <Tab label="Messaggi sincroni" />
           <Tab label="Messaggi asincroni" />
-          <Tab label="Comunicazione con finestre nascoste" />
         </Tabs>
       </AppBar>
 

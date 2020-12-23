@@ -9,5 +9,5 @@ export type Props = {
 export default function PongBox({ value }: Props) {
   if (!value) return <></>;
 
-  return <Typography>The process replyed with: {value}</Typography>;
+  return <Typography>Il processo ha risposto: {value}</Typography>;
 }

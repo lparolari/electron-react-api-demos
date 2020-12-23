@@ -6,8 +6,8 @@ export type Props = React.ComponentProps<typeof Button>;
 
 export default function MainListenerButton({ onClick, ...rest }: Props) {
   return (
-    <Button color="primary" onClick={onClick} {...rest}>
-      Add main proc listener
+    <Button color="primary" variant="outlined" onClick={onClick} {...rest}>
+      Aggiungi ping listener
     </Button>
   );
 }
