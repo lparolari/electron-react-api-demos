@@ -41,7 +41,7 @@ export default function SyntaxHighlighter({ code, style, ...rest }: Props) {
   }
   return (
     <ReactSyntaxHighlighter
-      language="tsx"
+      language="typescript"
       style={style}
       showLineNumbers
       {...rest}
