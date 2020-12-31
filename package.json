@@ -76,9 +76,9 @@
       ]
     },
     "win": {
+      "icon": "./resources/icons/256x256.png",
       "target": [
-        "nsis",
-        "msi"
+        "nsis"
       ]
     },
     "linux": {

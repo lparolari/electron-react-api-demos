@@ -6,7 +6,7 @@ function getAppPath() {
 }
 
 function getElectronVersion() {
-  return process.versions.electron;
+  return remote.process.versions.electron;
 }
 
 function getOsHomeDir() {

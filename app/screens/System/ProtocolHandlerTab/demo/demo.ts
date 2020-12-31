@@ -11,8 +11,9 @@ function addProtocolHandler() {
 }
 
 function openExternalPage() {
+  console.log(`file://${path('../resources/protocol-handler-demo.html')}`);
   shell.openExternal(
-    `file://${path('screens/System/ProtocolHandlerTab/demo/index.html')}`
+    `file://${path('../resources/protocol-handler-demo.html')}`
   );
 }
 
