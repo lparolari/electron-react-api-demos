@@ -57,6 +57,10 @@ export default function Home(): JSX.Element {
           <Typography variant="h6" gutterBottom>
             Utilizzo
           </Typography>
+          <Typography paragraph>
+            Naviga e prova le varie funzionalità offerte dall&apos;applicazione:
+            accedi alle features dal menu a lato.
+          </Typography>
           <Typography>
             L&apos;icona <CodeIcon /> ti permette di visualizzare il codice
             sorgente della demo.
