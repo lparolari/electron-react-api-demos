@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Grid, Typography } from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 
 import DemoSource from '../../../../components/DemoSource/DemoSource';
 import TabPanel from '../../../../components/TabPanel/TabPanel';

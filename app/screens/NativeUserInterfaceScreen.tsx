@@ -4,7 +4,6 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import PaddedContainer from '../components/Container/Container';
-import ExternalUrl from '../components/ExternalUrl/ExternalUrl';
 import NotificationTabs from './NativeUserInterface/Notification/Tabs';
 import OpenExternalTabs from './NativeUserInterface/OpenExternal/Tabs';
 import TrayTabs from './NativeUserInterface/Tray/Tabs';

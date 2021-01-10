@@ -5,10 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-import Typography from '@material-ui/core/Typography';
 
 import PaddedContainer from '../components/Container/Container';
-import ExternalUrl from '../components/ExternalUrl/ExternalUrl';
 import ApplicationMenuTab from './Menu/ApplicationMenu/ApplicationMenuTab';
 import ContextMenuTab from './Menu/ContextMenu/ContextMenuTab';
 import KeyboardShortcutTab from './Menu/KeyboardShortcut/KeyboardShortcutTab';
