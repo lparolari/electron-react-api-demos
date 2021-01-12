@@ -26,6 +26,82 @@ demo.
 
 ## Demo
 
+La demo implementa alcune funzionalità interessanti di Electron.js e
+mostra tramite esempi e snippet di codice come è possibile utilizzare
+il framework per costruire un'applicazione vera e propria.
+
+### Struttura
+
+L'applicazione è stata creata a partire da una boilerplate predisposta
+dal team di Electron.js in collaborazione con la community:
+[electron-react-boileplate](https://github.com/chentsulin/electron-react-boilerplate).
+Quest'ultima può essere installata ed utilizzata come pacchetto di
+partenza per applicazioni Electron.js + React.js. Essa fornisce una
+serie di funzionalità molto utili ai developer, oltre ad essere
+predisposta per poter iniziare con lo sviluppo senza ulteriori
+configurazioni.
+
+Internamente la boilerplate integra il tool
+[electron-builder](https://github.com/electron-userland/electron-builder),
+definito come "una soluzione completa per costruire e pacchettizzare
+applicazioni Electron.js pronte per la distrubuzione". Questo
+strumento infatti punta a ridurre la complessità della distribuzione
+delle applicazioni gestendo e integrando funzionalità per la
+pacchettizzazione su diverse piattaforme, distribuzione,
+aggiornamenti, ecc.
+
+### Codice
+
+L'organizzazione interna del codice segue principalmente le linee
+guida di React.js, Node.js ed Electron.js.
+
+In questo caso l'applicazione è organizzata in una serie di cartelle e
+sottocartelle, alcune delle quali contengono codice sorgente, altre
+file di configurazione e altre ancora delle risorse richieste da
+Electron.js per poter integrare le sue funzionalità.
+
+```
+..
+├── app
+├── configs
+├── dll
+├── docs
+├── internals
+├── node_modules
+├── release
+├── resources
+└── test
+```
+
+In ordine troviamo
+
+- `app`, con il codice sorgente dell'applicazione (principalmente
+  React.js);
+
+- `configs`, con le configurazioni [webpack](https://webpack.js.org/)
+  ovvero lo strumento per costruire dei bundle ottimizzati per
+  applicazioni JavaScript ed altre eventuali configurazioni;
+
+- `dll` ed `internals`, con alcuni file predisposti dalla boilerplate
+  per migliorare il funzionamento di Electron.js in fase di sviluppo;
+
+- `docs`, con la documentazione del progetto;
+
+- `node_modules`, con tutti i pacchetti installati per questo
+  progetto;
+
+- `release`, con i file compilati da Electron.js durante la fase di
+  costruzione e pacchettizzazione dell'app per le varie piattaforme;
+
+- `resources`, con i file statici dell'applicazione;
+
+- `test`, con i test di unità dell'applicazione.
+
+> Attenzione! La navigazioe della cartella `app` richiede la
+> conoscenza di React.js.
+
+### Funzionalità
+
 ## Electron.js
 
 **Cos'è Electron?** Electron.js è un framework cross-platfrom per
