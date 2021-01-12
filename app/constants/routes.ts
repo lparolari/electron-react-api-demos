@@ -1,3 +1,11 @@
+export function getDefaultRouteName(r: string) {
+  let s = r;
+  s = s.replaceAll('/', ' ');
+  s = s.replaceAll('-', ' ');
+  s = s.trim();
+  return s;
+}
+
 export default function routes() {
   return {
     home: () => '/home',
@@ -13,6 +21,7 @@ export default function routes() {
     communication: () => '/communication',
     system: () => '/system',
     media: () => '/media',
+    about: () => '/about',
   };
 }
 
@@ -24,6 +33,7 @@ export function routeName(r: string) {
   if (r === routes().communication()) return 'Comunicazione';
   if (r === routes().system()) return 'Sistema';
   if (r === routes().media()) return 'Media';
+  if (r === routes().about()) return 'About';
 
-  return 'Route not found';
+  return getDefaultRouteName(r);
 }

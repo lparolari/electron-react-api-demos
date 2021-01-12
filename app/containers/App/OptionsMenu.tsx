@@ -1,34 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import { List } from '@material-ui/core';
+import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import PeopleIcon from '@material-ui/icons/People';
+import routes from '../../constants/routes';
 
 export default function OptionsMenu() {
   return (
     <List>
-      <ListSubheader inset>Saved reports</ListSubheader>
-      <ListItem button>
-        <ListItemIcon>
-          <AssignmentIcon />
-        </ListItemIcon>
-        <ListItemText primary="Current month" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <AssignmentIcon />
-        </ListItemIcon>
-        <ListItemText primary="Last quarter" />
-      </ListItem>
-      <ListItem button>
-        <ListItemIcon>
-          <AssignmentIcon />
-        </ListItemIcon>
-        <ListItemText primary="Year-end sale" />
-      </ListItem>
+      <ListSubheader inset>Dettagli</ListSubheader>
+      <Link to={routes().about()}>
+        <ListItem button>
+          <ListItemIcon>
+            <PeopleIcon />
+          </ListItemIcon>
+          <ListItemText primary="About" />
+        </ListItem>
+      </Link>
     </List>
   );
 }

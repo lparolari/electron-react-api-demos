@@ -33,6 +33,9 @@ const LazySystemScreen = React.lazy(() =>
 const LazyMediaScreen = React.lazy(() =>
   import(/* webpackChunkName: "MediaScreen" */ './screens/MediaScreen')
 );
+const LazyAboutScreen = React.lazy(() =>
+  import(/* webpackChunkName: "LazyAboutScreen" */ './screens/AboutScreen')
+);
 
 const HomeScreen = (props: Record<string, unknown>) => <HomePage {...props} />;
 
@@ -72,6 +75,12 @@ const LazyMedia = (props: Record<string, unknown>) => (
   </Suspense>
 );
 
+const LazyAbout = (props: Record<string, unknown>) => (
+  <Suspense>
+    <LazyAboutScreen {...props} />
+  </Suspense>
+);
+
 const AppSwitch = () => (
   <Switch>
     <Route exact path="/" component={HomeScreen} />
@@ -86,6 +95,7 @@ const AppSwitch = () => (
     />
     <Route exact path={routes().system()} component={LazySystem} />
     <Route exact path={routes().media()} component={LazyMedia} />
+    <Route exact path={routes().about()} component={LazyAbout} />
   </Switch>
 );
 
