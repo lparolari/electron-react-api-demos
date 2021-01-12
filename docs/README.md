@@ -2,88 +2,195 @@
 
 ## Introduzione
 
-L'applicazione desktop _electron-demo-react_ (d'ora in poi riferita come _app_ o _demo_) mostra in modo interattivo alcune delle funzionalità principali del framework [Electron.js](https://www.electronjs.org/), approfondendo quindi tramite esempi l'utilizzo delle API e degli widget di Electron.js.
+L'applicazione desktop _electron-demo-react_ (d'ora in poi riferita
+come _app_ o _demo_) mostra in modo interattivo alcune delle
+funzionalità principali del framework
+[Electron.js](https://www.electronjs.org/), approfondendo quindi
+tramite esempi l'utilizzo delle API e degli widget di Electron.js.
 
-La demo sviluppata consiste in un'applicazione desktop basata principalmente sul framework cross-platform Electron.js, associato alla libreria [React.js](https://reactjs.org/) per la gestione dell'interfaccia utente e al linguaggio di programmazione [TypeScript](https://www.typescriptlang.org/), un superset di JavaScript, che assicura la _type safety_.
+La demo sviluppata consiste in un'applicazione desktop basata
+principalmente sul framework cross-platform Electron.js, associato
+alla libreria [React.js](https://reactjs.org/) per la gestione
+dell'interfaccia utente e al linguaggio di programmazione
+[TypeScript](https://www.typescriptlang.org/), un superset di
+JavaScript, che assicura la _type safety_.
 
-Il seguente documento ha lo scopo di illustrare le funzionalità implementate nella demo senza specificare i dettagli tecnici, facilmente reperibili sulla documentazione, ma facendo in modo di essere una sorta di guida "by examples" per alcune funzionalità di Electron.js. Alla sezione TODO demo vengono discussi i dettagli della demo sviluppata, mentre alla [sezione Electron.js](#electron-js) viene approfondito il framework principali utilizzato per l'applicazione demo.
+Il seguente documento ha lo scopo di illustrare le funzionalità
+implementate nella demo senza specificare i dettagli tecnici,
+facilmente reperibili sulla documentazione, ma facendo in modo di
+essere una sorta di guida "by examples" per alcune funzionalità di
+Electron.js. Alla sezione TODO demo vengono discussi i dettagli della
+demo sviluppata, mentre alla [sezione Electron.js](#electron-js) viene
+approfondito il framework principali utilizzato per l'applicazione
+demo.
 
 ## Demo
 
 ## Electron.js
 
-**Cos'è Electron?** Electron.js è un framework cross-platfrom per creare applicazione con tecnologie web come JavaScript, HTML e CSS. Le applicazione create con Electron.js possono essere facilmente "pacchettizzate" in diversi formati distribuibili ed eseguibili sui principali sistemi operativi in uso attualmente: macOS, Windows e Linux. Ciò è reso possibile grazie a strumenti come Node.js per l'interazione con il file system e con il sistema operativo e Chromium per renderizzare il contenuto a video.
+**Cos'è Electron?** Electron.js è un framework cross-platfrom per
+creare applicazione con tecnologie web come JavaScript, HTML e CSS. Le
+applicazione create con Electron.js possono essere facilmente
+"pacchettizzate" in diversi formati distribuibili ed eseguibili sui
+principali sistemi operativi in uso attualmente: macOS, Windows e
+Linux. Ciò è reso possibile grazie a strumenti come Node.js per
+l'interazione con il file system e con il sistema operativo e Chromium
+per renderizzare il contenuto a video.
 
-**Scope e target.** Electron.js è stato sviluppato come progetto proprietario da [GitHub](https://github.com/) nel 2013 principalmente per sviluppare l'editor [Atom](https://atom.io/), ed è poi diventato un progetto open-source nel 2014.
+**Scope e target.** Electron.js è stato sviluppato come progetto
+proprietario da [GitHub](https://github.com/) nel 2013 principalmente
+per sviluppare l'editor [Atom](https://atom.io/), ed è poi diventato
+un progetto open-source nel 2014.
 
-L'utenza target di Electron.js sono principalmente gli web developer con conoscenze HTML, CSS e JavaScript che vogliono rendere le loro applicazioni installabili come app desktop.
+L'utenza target di Electron.js sono principalmente gli web developer
+con conoscenze HTML, CSS e JavaScript che vogliono rendere le loro
+applicazioni installabili come app desktop.
 
-**Diffusione.** Electron.js è un framework che non ha avuto una grossa esplosione iniziale, ma sicuramente si colloca tra i tool più utilizzati per sviluppare applicazioni desktop basate su tecnologie web.
+**Diffusione.** Electron.js è un framework che non ha avuto una grossa
+esplosione iniziale, ma sicuramente si colloca tra i tool più
+utilizzati per sviluppare applicazioni desktop basate su tecnologie
+web.
 
-Electron.js inoltre può contare su di un [parco applicazioni](https://www.electronjs.org/apps) open-source molto ricco che fanno da esempio, oltre ad alcune app sviluppate con Electron.js di notevole rilevanza come [WhatsApp](https://www.whatsapp.com/), [VS Code](https://code.visualstudio.com/), [Twich](https://twitch.com/), [Slack](https://slack.com/) e [Figma](https://figma.com/).
+Electron.js inoltre può contare su di un
+[parco applicazioni](https://www.electronjs.org/apps) open-source
+molto ricco che fanno da esempio, oltre ad alcune app sviluppate con
+Electron.js di notevole rilevanza come
+[WhatsApp](https://www.whatsapp.com/),
+[VS Code](https://code.visualstudio.com/),
+[Twich](https://twitch.com/), [Slack](https://slack.com/) e
+[Figma](https://figma.com/).
 
-La [community](https://www.electronjs.org/community) è molto attiva anche grazie al fatto che viene prestata molta attenzione e cura alle [traduzioni](https://www.electronjs.org/languages) della documentazione, allo sviluppo di applicazioni di esempio come [Electron API demos](https://github.com/electron/electron-api-demos) e [Electron Fiddle](https://github.com/electron/fiddle) e alla manutenzione di una miriade di [tools](https://www.electronjs.org/community#tools) che semplificano l'esperienza di programmazione in Electron.js.
+La [community](https://www.electronjs.org/community) è molto attiva
+anche grazie al fatto che viene prestata molta attenzione e cura alle
+[traduzioni](https://www.electronjs.org/languages) della
+documentazione, allo sviluppo di applicazioni di esempio come
+[Electron API demos](https://github.com/electron/electron-api-demos) e
+[Electron Fiddle](https://github.com/electron/fiddle) e alla
+manutenzione di una miriade di
+[tools](https://www.electronjs.org/community#tools) che semplificano
+l'esperienza di programmazione in Electron.js.
 
-Da un punto di vista quantitativo la diffusione di Electron.js può essere analizzata visualizzandone il trend su [stackoverflow trends](https://insights.stackoverflow.com/trends?tags=electron) e [npm trends](https://www.npmtrends.com/electron). Un altro riferimento può essere dato dal numero dell GitHub stars che attualmente ammontano a [88k](https://github.com/electron/electron/stargazers).
+Da un punto di vista quantitativo la diffusione di Electron.js può
+essere analizzata visualizzandone il trend su
+[stackoverflow trends](https://insights.stackoverflow.com/trends?tags=electron)
+e [npm trends](https://www.npmtrends.com/electron). Un altro
+riferimento può essere dato dal numero dell GitHub stars che
+attualmente ammontano a
+[88k](https://github.com/electron/electron/stargazers).
 
 ### Electron Core
 
-Per permettere lo sviluppo di applicazioni eseguibili su tre piattaforme diverse con tecnologie web Electron.js usa un particolare sistema che permette di istanziare un browser Chromium per visualizzare il contenuto dell'applicazione in finestre. In più, esso ottiene l'accesso alle API di Node.js e può quindi interagire con il file system ed il sistema operativo, proprio come Node.js.
+Per permettere lo sviluppo di applicazioni eseguibili su tre
+piattaforme diverse con tecnologie web Electron.js usa un particolare
+sistema che permette di istanziare un browser Chromium per
+visualizzare il contenuto dell'applicazione in finestre. In più, esso
+ottiene l'accesso alle API di Node.js e può quindi interagire con il
+file system ed il sistema operativo, proprio come Node.js.
 
-Ciò ha un sacco di implicazioni interessanti: prima tra tutte il fatto che l'applicazione tecnicamente può funzionare anche senza una connessione ad internet. Da non sottovalutare poi il fatto che per l'ambiente Node.js sono stati sviluppati moltissimi package che implementano le funzionalità più disparate, e di conseguenza possono essere facilmente integrati in un'applicazione Electron.js.
+Ciò ha un sacco di implicazioni interessanti: prima tra tutte il fatto
+che l'applicazione tecnicamente può funzionare anche senza una
+connessione ad internet. Da non sottovalutare poi il fatto che per
+l'ambiente Node.js sono stati sviluppati moltissimi package che
+implementano le funzionalità più disparate, e di conseguenza possono
+essere facilmente integrati in un'applicazione Electron.js.
 
-Un'applicazione Electron.js quindi non è altro che un'applicazione Node.js con un'interfaccia web.
+Un'applicazione Electron.js quindi non è altro che un'applicazione
+Node.js con un'interfaccia web.
 
 Da ciò si evince che
 
 > Electron.js è un framework interpretato
 
-seppur i bundle prodotti sono applicazioni direttamente installabili ed eseguibili come app native. Questo accade perché il pacchetto generato è semplicemente un wrapper per un'istanza del browser Chromium e Node.js, i quali poi interpretano il codice JavaScript.
+seppur i bundle prodotti sono applicazioni direttamente installabili
+ed eseguibili come app native. Questo accade perché il pacchetto
+generato è semplicemente un wrapper per un'istanza del browser
+Chromium e Node.js, i quali poi interpretano il codice JavaScript.
 
 ### Electron APIs
 
-Proprio come Node.js al quale si appoggia, anche Electron.js è fortemente basato su eventi, i quali sono notificati nell'oggetto app di Electron.js.
+Proprio come Node.js al quale si appoggia, anche Electron.js è
+fortemente basato su eventi, i quali sono notificati nell'oggetto app
+di Electron.js.
 
-Electron.js inoltre fornisce delle API per l'accesso alle funzionalità che vengono diversificate in base al tipo di processo che le richiede. In particolare Electron.js implementa due tipi di processi: main process e renderer process.
+Electron.js inoltre fornisce delle API per l'accesso alle funzionalità
+che vengono diversificate in base al tipo di processo che le richiede.
+In particolare Electron.js implementa due tipi di processi: main
+process e renderer process.
 
-**Main process.** Il main process, anche detto "browser process" è il processo che gestisce:
+**Main process.** Il main process, anche detto "browser process" è il
+processo che gestisce:
 
-- la creazione di funzionalità native come menu, trays, notifiche ed altri widget legati al sistema operativo;
+- la creazione di funzionalità native come menu, trays, notifiche ed
+  altri widget legati al sistema operativo;
 
 - la creazione di altri processi di renderer;
 
 - l'accesso completo alle API di Node.js.
 
-Inoltre, è il primo processo ad essere istanziato all'avvio dell'applicazione e ne rappresenta anche l'entry point.
+Inoltre, è il primo processo ad essere istanziato all'avvio
+dell'applicazione e ne rappresenta anche l'entry point.
 
-**Renderer process.** Il renderer process è un processo il cui scopo è quello di gestire le finestre del browser e renderizzarne il contenuto. Ogni finestra è associata ad un renderer process, proprio come in Chromium e questo processo può dialogare tramite comunicazione IPC con gli altri renderer process o con il main process.
+**Renderer process.** Il renderer process è un processo il cui scopo è
+quello di gestire le finestre del browser e renderizzarne il
+contenuto. Ogni finestra è associata ad un renderer process, proprio
+come in Chromium e questo processo può dialogare tramite comunicazione
+IPC con gli altri renderer process o con il main process.
 
 ### UI tools
 
-Electron.js è stato principalmente pensato per implementare interfacce grafiche in HTML, CSS e JavaScript. Tuttavia, data la sua natura, viene lasciata una grossa libertà di utilizzo per quanto riguarda la costruzione della UI: possono infatti essere impiegate tutte le tecnologie attualmente disponibili per lo sviluppo web come [Vue.js](https://vuejs.org/), [React.js](https://reactjs.org/), [Angular](https://angular.io/), ed altre con tanto di librerie grafiche come [Bootstrap](https://getbootstrap.com/),[Material UI](https://material-ui.com/), [Semantic UI](https://semantic-ui.com/) e chi più ne ha più ne metta.
+Electron.js è stato principalmente pensato per implementare interfacce
+grafiche in HTML, CSS e JavaScript. Tuttavia, data la sua natura,
+viene lasciata una grossa libertà di utilizzo per quanto riguarda la
+costruzione della UI: possono infatti essere impiegate tutte le
+tecnologie attualmente disponibili per lo sviluppo web come
+[Vue.js](https://vuejs.org/), [React.js](https://reactjs.org/),
+[Angular](https://angular.io/), ed altre con tanto di librerie
+grafiche come
+[Bootstrap](https://getbootstrap.com/),[Material UI](https://material-ui.com/),
+[Semantic UI](https://semantic-ui.com/) e chi più ne ha più ne metta.
 
-Ecco quindi che Electron.js può essere visto semplicemente come il fornitore di un ambiente web dove eseguire una qualunque applicazione che può essere eseguita dal browser, con l'enorme valore aggiunto di poter utilizzare componenti nativi dell'OS oltre al sistema di "pacchettizzazione" delle app in bundle pronti da installare.
+Ecco quindi che Electron.js può essere visto semplicemente come il
+fornitore di un ambiente web dove eseguire una qualunque applicazione
+che può essere eseguita dal browser, con l'enorme valore aggiunto di
+poter utilizzare componenti nativi dell'OS oltre al sistema di
+"pacchettizzazione" delle app in bundle pronti da installare.
 
 ### Funzionalità native
 
-Le funzionalità native fornite sono svariate e combinano la potenza di Chromium con la versatilità di Node.js. La seguente lista non esaustiva elenca alcune delle principali features, la maggior parte delle quali sono state implementate nella demo.
+Le funzionalità native fornite sono svariate e combinano la potenza di
+Chromium con la versatilità di Node.js. La seguente lista non
+esaustiva elenca alcune delle principali features, la maggior parte
+delle quali sono state implementate nella demo.
 
 - [Notifiche](https://www.electronjs.org/docs/tutorial/notifications)
+
 - [Documenti recenti](https://www.electronjs.org/docs/tutorial/recent-documents)
+
 - [Progress bar](https://www.electronjs.org/docs/tutorial/progress-bar)
+
 - [Personalizzazione dock MacOS](https://www.electronjs.org/docs/tutorial/macos-dock)
+
 - [Personalizzazione taskbar Windows](https://www.electronjs.org/docs/tutorial/windows-taskbar)
+
 - [Personalizzazione desktop actions Linux](https://www.electronjs.org/docs/tutorial/linux-desktop-actions)
+
 - [Scorciatoie da tastiera](https://www.electronjs.org/docs/tutorial/keyboard-shortcuts)
+
 - [Rilevazione stato della connessione](https://www.electronjs.org/docs/tutorial/online-offline-events)
+
 - [Drag & drop](https://www.electronjs.org/docs/tutorial/native-file-drag-drop)
+
 - [Web embeds in Electron](https://www.electronjs.org/docs/tutorial/web-embeds)
 
-Altre informazioni sono disponibili alla pagina ufficiale della [documentazione](https://www.electronjs.org/docs#learning-the-basics) di Electron.js.
+Altre informazioni sono disponibili alla pagina ufficiale della
+[documentazione](https://www.electronjs.org/docs#learning-the-basics)
+di Electron.js.
 
 ### Pro e contro
 
-Tra le innumerevole caratteristiche di Electron.js ci sono anche alcune controindicazioni sull'uso di electron. Di seguito sono elencate i principali punti di forza/debolezza di Electron.js
+Tra le innumerevole caratteristiche di Electron.js ci sono anche
+alcune controindicazioni sull'uso di electron. Di seguito sono
+elencate i principali punti di forza/debolezza di Electron.js
 
 **Pro.**
 
@@ -99,9 +206,11 @@ Tra le innumerevole caratteristiche di Electron.js ci sono anche alcune controin
 
 - Flessibile e personalizzabile
 
-- Supporta i principali sistemi operativi e anche [alcune varianti](https://www.electronjs.org/docs/tutorial/support#supported-platforms)
+- Supporta i principali sistemi operativi e anche
+  [alcune varianti](https://www.electronjs.org/docs/tutorial/support#supported-platforms)
 
-- Implementa svariate API per l'accesso a componenti nativi del sistema operativo
+- Implementa svariate API per l'accesso a componenti nativi del
+  sistema operativo
 
 - Fornisce una documentazione adeguata e ricca di esempi
 
@@ -123,17 +232,35 @@ Tra le innumerevole caratteristiche di Electron.js ci sono anche alcune controin
 
 ### Alternative
 
-Di seguito sono elencati alcuni delle principali alternative ad Electron.js attualmente sul mercato, anche se principalmente nessuno di questi (tranne NW.js) è un competitor diretto di Electron.js perché il desgin e la struttura dei progetti sono completamente diversi.
+Di seguito sono elencati alcuni delle principali alternative ad
+Electron.js attualmente sul mercato, anche se principalmente nessuno
+di questi (tranne NW.js) è un competitor diretto di Electron.js perché
+il desgin e la struttura dei progetti sono completamente diversi.
 
-- [NW.js](https://nwjs.io/). Conosciuto anche come Node Webkit consente è un kit di strumenti che consentono di sviluppare applicazioni desktop cross-platform con strumenti web come HTML, CSS, JavaScript e WebGL.
+- [NW.js](https://nwjs.io/). Conosciuto anche come Node Webkit
+  consente è un kit di strumenti che consentono di sviluppare
+  applicazioni desktop cross-platform con strumenti web come HTML,
+  CSS, JavaScript e WebGL.
 
-- [Haxe](http://haxe.org/). Haxe è un kit di strumenti di sviluppo open-source ad alto livello che consentono di sviluppare applicazioni scritte in Haxe che possono poi essere compilate in differenti linguaggi e piattaforme target.
+- [Haxe](http://haxe.org/). Haxe è un kit di strumenti di sviluppo
+  open-source ad alto livello che consentono di sviluppare
+  applicazioni scritte in Haxe che possono poi essere compilate in
+  differenti linguaggi e piattaforme target.
 
-- [Qt](https://www.qt.io/). Qt è un framework cross-platform per lo sviluppo di applicazioni desktop, embedded e mobile. Qt non è un linguaggio di programmazione, ma è scritto in C++ e anche il codice utente è scritto in C++.
+- [Qt](https://www.qt.io/). Qt è un framework cross-platform per lo
+  sviluppo di applicazioni desktop, embedded e mobile. Qt non è un
+  linguaggio di programmazione, ma è scritto in C++ e anche il codice
+  utente è scritto in C++.
 
 ### Valutazione
 
-In conclusione, secondo il mio parere Electron.js è un ottimo framework per lo sviluppo di app desktop, semplice da usare per web developer e supportato da moltissimi esempi e una community attiva. Chiaramente, presenta alcuni svantaggi da non sottovalutare, i quali però sono soggetti al dominio del problema che si cerca di risolvere. Per quanto riguarda lo sviluppo di app standard secondo me è un ottimo strumento.
+In conclusione, secondo il mio parere Electron.js è un ottimo
+framework per lo sviluppo di app desktop, semplice da usare per web
+developer e supportato da moltissimi esempi e una community attiva.
+Chiaramente, presenta alcuni svantaggi da non sottovalutare, i quali
+però sono soggetti al dominio del problema che si cerca di risolvere.
+Per quanto riguarda lo sviluppo di app standard secondo me è un ottimo
+strumento.
 
 # Riferimenti
 
