@@ -19,10 +19,47 @@ Il seguente documento ha lo scopo di illustrare le funzionalità
 implementate nella demo senza specificare i dettagli tecnici,
 facilmente reperibili sulla documentazione, ma facendo in modo di
 essere una sorta di guida "by examples" per alcune funzionalità di
-Electron.js. Alla sezione TODO demo vengono discussi i dettagli della
-demo sviluppata, mentre alla [sezione Electron.js](#electron-js) viene
-approfondito il framework principali utilizzato per l'applicazione
-demo.
+Electron.js. Alla sezione [Demo](#demo) vengono discussi i dettagli
+della demo sviluppata, mentre alla sezione [Electron.js](#electronjs)
+viene approfondito il framework principali utilizzato per
+l'applicazione demo.
+
+## Indice
+
+- [Introduzione](#introduzione)
+- [Demo](#demo)
+  - [Struttura](#struttura)
+  - [Codice](#codice)
+  - [Funzionalità](#funzionalit)
+    - [Finestre](#finestre)
+      - [Framed Window](#framed-window)
+      - [Frameless Window](#frameless-window)
+      - [Managed Window](#managed-window)
+      - [Events Window](#events-window)
+    - [Menu](#menu)
+      - [Menu Applicazione](#menu-applicazione)
+      - [Menu Contestuale](#menu-contestuale)
+    - [Interfaccia nativa](#interfaccia-nativa)
+      - [Gestore file](#gestore-file)
+      - [Risorsa esterna](#risorsa-esterna)
+      - [Notifiche](#notifiche)
+      - [Tray](#tray)
+    - [Comunicazione IPC](#comunicazione-ipc)
+      - [Messaggi asincroni](#messaggi-asincroni)
+    - [Sistema](#sistema)
+      - [Info app e sistema](#info-app-e-sistema)
+      - [Copia e incolla](#copia-e-incolla)
+    - [Media](#media)
+      - [Screenshot](#screenshot)
+- [Electron.js](#electronjs)
+  - [Electron Core](#electron-core)
+  - [Electron APIs](#electron-apis)
+  - [UI tools](#ui-tools)
+  - [Funzionalità native](#funzionalit-native)
+  - [Pro e contro](#pro-e-contro)
+  - [Alternative](#alternative)
+  - [Valutazione](#valutazione)
+- [Riferimenti](#riferimenti)
 
 ## Demo
 
@@ -156,7 +193,7 @@ _click tasto destro_.
 
 ![context-menu](demo/context-menu.gif)
 
-## Interfaccia nativa
+#### Interfaccia nativa
 
 ##### Gestore file
 
@@ -473,7 +510,7 @@ però sono soggetti al dominio del problema che si cerca di risolvere.
 Per quanto riguarda lo sviluppo di app standard secondo me è un ottimo
 strumento.
 
-# Riferimenti
+## Riferimenti
 
 TODO:
 
