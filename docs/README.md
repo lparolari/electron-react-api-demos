@@ -102,6 +102,141 @@ In ordine troviamo
 
 ### Funzionalità
 
+> Nota: sfortunatamente il pdf generato non può contenere immagini
+> animate. Si prenda visione della
+> [versione online](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/README.md)
+> che invece ha le immagini animate.
+
+#### Finestre
+
+##### Framed Window
+
+Crea una finestra con il frame del sistema operativo.
+
+![framed-window](demo/framed-window.gif)
+
+##### Frameless Window
+
+Crea una finestra senza bordi. Può essere utilizzata principalmente
+per (1) personalizzare il look & feel dell'applicazione oppure (2)
+bloccare l'interazione dell'utente sulla finestra (modale) che
+richiede interazione obbligatoria.
+
+![frameless-window](demo/frameless-window.gif)
+
+##### Managed Window
+
+Crea una finestre e il chiamante ha accesso alle sue proprietà: può
+leggerle o modificarle.
+
+![managed-window](demo/managed-window.gif)
+
+##### Events Window
+
+Crea una finestra e si mette in ascolto di alcuni eventi che la
+finestra può offrire, nell'esempio la perdita del focus.
+
+![events-window](demo/events-window.gif)
+
+#### Menu
+
+##### Menu Applicazione
+
+Crea o modifica il menu dell'applicazione per inserire funzionalità
+contestuali alle operazioni che l'utente sta svolgendo.
+
+![app-menu](demo/app-menu.gif)
+
+##### Menu Contestuale
+
+Crea un menu contestuale attivabile tramite una azione dell'utente
+come la pressione di un pulsante oppure il click del tasto destro. Per
+la seconda operazione bisogna registrare un callback sull'evento
+_click tasto destro_.
+
+![context-menu](demo/context-menu.gif)
+
+## Interfaccia nativa
+
+##### Gestore file
+
+Apre il gestore dei file del sistema operativo su una cartella
+specificata, nell'esempio la home dell'utente (cross-platform).
+
+![open-home-files](demo/open-home-files.gif)
+
+##### Risorsa esterna
+
+Apre la una risorsa estarna identificata da un URI tramite
+l'applicazione di default che gestisce il protocollo della risorsa.
+Nell'esempio viene aperto un link a Google.
+
+![open-browser](demo/open-browser.gif)
+
+##### Notifiche
+
+Invia una notifica mostrata tramite il sistema operativo come una
+notifica nativa. Le notifiche in Electron.js sono personalizzabili ma
+il supporto cross-platform è limitato e la notifica visualizzata
+dipende molto dal sistema operativo.
+
+![notifications](demo/notifications.gif)
+
+##### Tray
+
+Crea un'icona nel tray del sistema operavo. L'icona del tray può
+essere arricchita con diverse funzionalità con cui l'utente può
+interagire anche avendo l'app in background.
+
+![tray](demo/tray.gif)
+
+#### Comunicazione IPC
+
+##### Messaggi asincroni
+
+Utilizza la comunicazione IPC asincrona tra il processo _renderer_ che
+invia il messaggio e il processo _main_ che invece gestisce e risponde
+al messaggio.
+
+In electron la comunicazione IPC è semplificata da delle API molto
+intuitive che permettono di aggiungere _callback_ su canali ed inviare
+messaggi su canali.
+
+Nell'esempio il renderer invia il messaggio `ping` e il main risponde
+con `pong`.
+
+![async-messages](demo/async-messages.gif)
+
+#### Sistema
+
+##### Info app e sistema
+
+Accede a informazioni dell'applicazione e del sistema operativo.
+
+Nell'esempio vengono recuperate le informazioni sul path di
+installazione dell'applicazione, la versione di Electron.js in uso, il
+percorso della cartella utente e le dimensioni dello schemro
+utilizzato per l'app.
+
+![info](demo/info.png)
+
+##### Copia e incolla
+
+Utilizza la clipboard del sistema operativo per copiare e incollare
+testo.
+
+![copy-paste](demo/copy-paste.gif)
+
+#### Media
+
+##### Screenshot
+
+Cattura un'istantanea dell'applicazione. Nell'esempio la schermata
+catturata è salvata in una directory temporanea e immediatamente
+visualizzata con il viewer di default per le immagini.
+
+![screenshot](demo/screenshot.gif)
+
 ## Electron.js
 
 **Cos'è Electron?** Electron.js è un framework cross-platfrom per
