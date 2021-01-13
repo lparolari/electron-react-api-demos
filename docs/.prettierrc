@@ -1,6 +1,13 @@
 {
   "overrides": [
     {
+      "files": "Makefile",
+      "options": {
+        "useTabs": true,
+        "tabWidth": 4
+      }
+    },
+    {
       "files": ["*.md"],
       "options": {
         "proseWrap": "always",
