@@ -61,16 +61,16 @@ file di configurazione e altre ancora delle risorse richieste da
 Electron.js per poter integrare le sue funzionalità.
 
 ```
-..
-├── app
-├── configs
-├── dll
-├── docs
-├── internals
-├── node_modules
-├── release
-├── resources
-└── test
+.
+|-- app
+|-- configs
+|-- dll
+|-- docs
+|-- internals
+|-- node_modules
+|-- release
+|-- resources
+`-- test
 ```
 
 In ordine troviamo
