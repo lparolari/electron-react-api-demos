@@ -1,5 +1,20 @@
 # Electron Demo React
 
+> Luca Parolari, 1236601, luca.parolari@studenti.unipd.it \
+> Corso di Mobile Programming & Multimedia \
+> Dipartimento di Matematica \
+> Università degli Studi di Padova
+
+Tutto il codice della demo è disponibile su GitHub, con le relative
+istruzioni di compilazione.
+
+> [https://github.com/lparolari/electron-react-api-demos](https://github.com/lparolari/electron-react-api-demos)
+
+Questo documento può essere anche letto sulla sua versione online con
+immagini animate delle demo al link riportato di seguito.
+
+> [https://github.com/lparolari/electron-react-api-demos/blob/master/docs/README.md](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/README.md)
+
 ## Introduzione
 
 L'applicazione desktop _electron-demo-react_ (d'ora in poi riferita
@@ -16,17 +31,24 @@ dell'interfaccia utente e al linguaggio di programmazione
 JavaScript, che assicura la _type safety_.
 
 Il seguente documento ha lo scopo di illustrare le funzionalità
-implementate nella demo senza specificare i dettagli tecnici,
-facilmente reperibili sulla documentazione, ma facendo in modo di
-essere una sorta di guida "by examples" per alcune funzionalità di
-Electron.js. Alla sezione [Demo](#demo) vengono discussi i dettagli
-della demo sviluppata, mentre alla sezione [Electron.js](#electronjs)
-viene approfondito il framework principali utilizzato per
-l'applicazione demo.
+implementate nella demo senza specificare i dettagli tecnici e/o,
+facilmente reperibili sulla documentazione e nel codice di questo
+progetto, ma facendo in modo di essere una sorta di guida "by
+examples" per alcune funzionalità di Electron.js. Allo stesso tempo
+però la demo sviluppata è utilizzata come un pretesto per studiare ed
+identificare le potenzialità principali di Electron.js, compresi
+relativi svantaggi e punti deboli.
+
+La sezione [Conclusioni](#conclusioni) tira le somme sul progetto ed
+in particolare sul framework Electron.js, oggetto dello studio. Alla
+sezione [Demo](#demo) vengono discussi i dettagli della demo
+sviluppata, mentre alla sezione [Electron.js](#electronjs) viene
+approfondito il framework e le sue caratteristiche.
 
 ## Indice
 
 - [Introduzione](#introduzione)
+- [Conclusione](#conclusione)
 - [Demo](#demo)
   - [Struttura](#struttura)
   - [Codice](#codice)
@@ -60,6 +82,34 @@ l'applicazione demo.
   - [Alternative](#alternative)
   - [Valutazione](#valutazione)
 - [Riferimenti](#riferimenti)
+
+## Conclusione
+
+In conclusione, ho trovato Electron.js un ottimo framework
+cross-platform per lo sviluppo di applicazioni desktop grazie
+principalmente a tre fattori che personalmente me l'hanno fatto
+apprezzare molto: (1) documentazione ricca con numerosi esempi, (2)
+bootstrap dell'applicazione immediato e (3) facilità di utilizzo con
+background da web developer.
+
+Ritengo che Electron.js sia un framework piuttosto maturo e supportato
+e che sia l'ideale per sviluppare applicazioni desktop non troppo
+complesse. Ho trovato il suo sistema di build sorprendentemente
+robusto e semplice da utilizzare anche tra sistemi differenti.
+
+Electron.js non è comunque esente da alcuni svantaggi che al di là
+delle performance, developer experience e feature ne limitano
+l'utilizzo in certi contesti. Uno dei problemi più impattanti a
+livello interfaccia grafica è il non supporto out-of-the-box ad un
+look & feel nativo, solitamente preferibile in app dekstop. Per quanto
+riguarda invece i problemi tecnici, lo svantaggio principale è che non
+esiste un sistema integrato che si occupa di differenziare le chiamate
+native a seconda del sistema su cui si eseguie l'applicazione. Di
+fatto, in alcuni casi, il programmatore è chiamato a scrivere del
+codice specifico per ogni piattaforma. Questo complica notevolmente la
+struttura dell'applicazione e allunga i tempi di sviluppo oltre a
+rendere difficile l'implementazione uniforme di alcune funzionalità ed
+il testing.
 
 ## Demo
 
