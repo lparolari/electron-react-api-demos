@@ -371,7 +371,8 @@ Node.js con un'interfaccia web.
 
 Da ciò si evince che
 
-> Electron.js è un framework interpretato
+> Electron.js è un framework interpretato secondo la classificazione
+> di Raj-Tolety
 
 seppur i bundle prodotti sono applicazioni direttamente installabili
 ed eseguibili come app native. Questo accade perché il pacchetto
