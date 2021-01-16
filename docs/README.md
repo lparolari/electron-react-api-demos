@@ -417,8 +417,8 @@ costruzione della UI: possono infatti essere impiegate tutte le
 tecnologie attualmente disponibili per lo sviluppo web come
 [Vue.js](https://vuejs.org/), [React.js](https://reactjs.org/),
 [Angular](https://angular.io/), ed altre con tanto di librerie
-grafiche come
-[Bootstrap](https://getbootstrap.com/),[Material UI](https://material-ui.com/),
+grafiche come [Bootstrap](https://getbootstrap.com/),
+[Material UI](https://material-ui.com/),
 [Semantic UI](https://semantic-ui.com/) e chi più ne ha più ne metta.
 
 Ecco quindi che Electron.js può essere visto semplicemente come il
@@ -426,6 +426,18 @@ fornitore di un ambiente web dove eseguire una qualunque applicazione
 che può essere eseguita dal browser, con l'enorme valore aggiunto di
 poter utilizzare componenti nativi dell'OS oltre al sistema di
 "pacchettizzazione" delle app in bundle pronti da installare.
+
+Chiaramente, questo può essere un grosso vantaggio ma al tempo stesso
+uno svantaggio: il look & feel dell'applicazione dipende completamente
+come il web developer disegna ed implementa i suoi componenti, o da
+quale libreria importa per la costruzione degli stessi. Sono stati
+fatti degli sforzi in questo senso con
+[protonkit](http://photonkit.com/), libreria UI che tentava di emulare
+il look & feel nativo (cross-platform), ma purtroppo il progetto è
+stato abbandonato nel 2017. Si è tentano nuovamente con
+[proton-native](https://proton-native.js.org/), una sorta di erede di
+protonkit con il supporto a React.js, ma anche questo progetto sembra
+essere stato abbandonato ad inizio 2020.
 
 ### Funzionalità native
 
@@ -501,6 +513,9 @@ elencate i principali punti di forza/debolezza di Electron.js
 - Codice sorgente non criptato inserito nel bundle dell'app
 
 - Utilizzo delle periferiche I/O del sistema limitato
+
+- Look and feel dell'applicazione dipende dalla costruzione
+  dell'interfaccia grafica
 
 ### Alternative
 
