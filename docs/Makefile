@@ -3,8 +3,9 @@ ATTACHMENTS=demo
 ARGS=--rm --volume "`pwd`:/data" --user `id -u`:`id -g`
 ARGS_EXTRA=--variable urlcolor=blue
 
+pdf: ${MAINFILE}.pdf
 all: ${MAINFILE}.pdf ${MAINFILE}.zip ${MAINFILE}.tgz
-.PHONY: all
+.PHONY: pdf all
 
 # main recipes
 
@@ -23,5 +24,6 @@ clean: clear
 clear:
 	rm -f ${MAINFILE}.pdf
 	rm -f ${MAINFILE}.zip
+	rm -f ${MAINFILE}.tgz
 
 .PHONY: clean clear
