@@ -53,26 +53,20 @@ approfondito il framework e le sue caratteristiche.
   - [Struttura](#struttura)
   - [Codice](#codice)
   - [Funzionalità](#funzionalità)
-    - [Finestre](#finestre)
-      - [Framed Window](#framed-window)
-      - [Frameless Window](#frameless-window)
-      - [Managed Window](#managed-window)
-      - [Events Window](#events-window)
-    - [Menu](#menu)
-      - [Menu Applicazione](#menu-applicazione)
-      - [Menu Contestuale](#menu-contestuale)
-    - [Interfaccia nativa](#interfaccia-nativa)
-      - [Gestore file](#gestore-file)
-      - [Risorsa esterna](#risorsa-esterna)
-      - [Notifiche](#notifiche)
-      - [Tray](#tray)
-    - [Comunicazione IPC](#comunicazione-ipc)
-      - [Messaggi asincroni](#messaggi-asincroni)
-    - [Sistema](#sistema)
-      - [Info app e sistema](#info-app-e-sistema)
-      - [Copia e incolla](#copia-e-incolla)
-    - [Media](#media)
-      - [Screenshot](#screenshot)
+    - [Framed Window](#framed-window)
+    - [Frameless Window](#frameless-window)
+    - [Managed Window](#managed-window)
+    - [Events Window](#events-window)
+    - [Menu Applicazione](#menu-applicazione)
+    - [Menu Contestuale](#menu-contestuale)
+    - [Gestore file](#gestore-file)
+    - [Risorsa esterna](#risorsa-esterna)
+    - [Notifiche](#notifiche)
+    - [Tray](#tray)
+    - [Messaggi asincroni](#messaggi-asincroni)
+    - [Info app e sistema](#info-app-e-sistema)
+    - [Copia e incolla](#copia-e-incolla)
+    - [Screenshot](#screenshot)
 - [Electron.js](#electronjs)
   - [Electron Core](#electron-core)
   - [Electron APIs](#electron-apis)
@@ -190,114 +184,113 @@ In ordine troviamo
 ### Funzionalità
 
 > Nota: sfortunatamente il pdf generato non può contenere immagini
-> animate. Le demo sono allegate al documento.
+> animate. Le demo sono allegate al documento e per ogni demo è
+> fornito un link all'immagine animata online.
 
-> Nota: La
-> [**versione online**](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/README.md)
-> di questo documento **contiene le immagini animate**.
+#### Framed Window
 
-#### Finestre
+Crea una finestra con il frame del sistema operativo. Conferisce un
+look & feel nativo alla finestra e consente di creare finestre modali.
 
-##### Framed Window
-
-Crea una finestra con il frame del sistema operativo. Si veda la
-figura _Finestra con bordi_.
+Si veda la figura
+[Finestra con bordi](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/framed-window.gif).
 
 ![Finestra con bordi](demo/framed-window.gif)
 
-##### Frameless Window
+#### Frameless Window
 
 Crea una finestra senza bordi. Può essere utilizzata principalmente
 per (1) personalizzare il look & feel dell'applicazione oppure (2)
 bloccare l'interazione dell'utente sulla finestra (modale) che
 richiede interazione obbligatoria.
 
-Si veda la figura _Finestra senza bordi_.
+Si veda la figura
+[Finestra senza bordi](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/frameless-window.gif).
 
 ![Finestra senza bordi](demo/frameless-window.gif)
 
-##### Managed Window
+#### Managed Window
 
 Crea una finestre e il chiamante ha accesso alle sue proprietà: può
-leggerle o modificarle. Si veda la figura _Finestra gestita_.
+leggerle o modificarle. Si veda la figura
+[Finestra gestita](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/managed-window.gif).
 
 ![Finestra gestita](demo/managed-window.gif)
 
-##### Events Window
+#### Events Window
 
 Crea una finestra e si mette in ascolto di alcuni eventi che la
 finestra può offrire, nell'esempio la perdita del focus. Si veda la
-figura \_Finestra con eventi.
+figura
+[Finestra con eventi](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/events-window.gif).
 
 ![Finestra con eventi](demo/events-window.gif)
 
-#### Menu
-
-##### Menu Applicazione
+#### Menu Applicazione
 
 Crea o modifica il menu dell'applicazione per inserire funzionalità
 contestuali alle operazioni che l'utente sta svolgendo.
 
-Si veda la figura _Menu applicazione_.
+Si veda la figura
+[Menu applicazione](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/app-menu.gif).
 
 ![Menu applicazione](demo/app-menu.gif)
 
-##### Menu Contestuale
+#### Menu Contestuale
 
 Crea un menu contestuale attivabile tramite una azione dell'utente
 come la pressione di un pulsante oppure il click del tasto destro. Per
 la seconda operazione bisogna registrare un callback sull'evento
 _click tasto destro_.
 
-Si veda la figura _Menu contestuale_.
+Si veda la figura
+[Menu contestuale](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/context-menu.gif).
 
 ![Menu contestuale](demo/context-menu.gif)
 
-#### Interfaccia nativa
-
-##### Gestore file
+#### Gestore file
 
 Apre il gestore dei file del sistema operativo su una cartella
 specificata, nell'esempio la home dell'utente (cross-platform).
 
-Si veda la figura _Gestore file_.
+Si veda la figura
+[Gestore file](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/open-home-files.gif).
 
 ![Gestore file](demo/open-home-files.gif)
 
-##### Risorsa esterna
+#### Risorsa esterna
 
 Apre la una risorsa estarna identificata da un URI tramite
 l'applicazione di default che gestisce il protocollo della risorsa.
 Nell'esempio viene aperto un link a Google.
 
-Si veda la figura _Risorsa esterna_.
+Si veda la figura
+[Risorsa esterna](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/open-browser.gif).
 
 ![Risorsa esterna](demo/open-browser.gif)
-
-##### Notifiche
 
 Invia una notifica mostrata tramite il sistema operativo come una
 notifica nativa. Le notifiche in Electron.js sono personalizzabili ma
 il supporto cross-platform è limitato e la notifica visualizzata
 dipende molto dal sistema operativo.
 
-Si veda la figura _Notifiche_.
+Si veda la figura
+[Notifiche](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/notifications.gif).
 
 ![Notifiche](demo/notifications.gif)
 
-##### Tray
+#### Tray
 
 Crea un'icona nel tray del sistema operavo. L'icona del tray può
 essere arricchita con diverse funzionalità con cui l'utente può
 interagire anche avendo l'app in background.
 
-Si veda la figura _Tray_.
+Si veda la figura
+[Tray](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/tray.gif).
 
 ![Tray](demo/tray.gif)
 
-#### Comunicazione IPC
-
-##### Messaggi asincroni
+#### Messaggi asincroni
 
 Utilizza la comunicazione IPC asincrona tra il processo _renderer_ che
 invia il messaggio e il processo _main_ che invece gestisce e risponde
@@ -308,13 +301,12 @@ intuitive che permettono di aggiungere _callback_ su canali ed inviare
 messaggi su canali.
 
 Nell'esempio il renderer invia il messaggio `ping` e il main risponde
-con `pong`. Si veda la figura _Messaggi asincroni_.
+con `pong`. Si veda la figura
+[Messaggi asincroni](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/async-messages.gif).
 
 ![Messaggi asincroni](demo/async-messages.gif)
 
-#### Sistema
-
-##### Informazioni app e sistema
+#### Informazioni app e sistema
 
 Accede a informazioni dell'applicazione e del sistema operativo.
 
@@ -323,28 +315,29 @@ installazione dell'applicazione, la versione di Electron.js in uso, il
 percorso della cartella utente e le dimensioni dello schemro
 utilizzato per l'app.
 
-Si veda la figura _Informazioni app e sistema_.
+Si veda la figura
+[Informazioni app e sistema](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/info.png).
 
 ![Informazioni app e sistema](demo/info.png)
 
-##### Copia e incolla
+#### Copia e incolla
 
 Utilizza la clipboard del sistema operativo per copiare e incollare
 testo.
 
-Si veda la figura _Copia e incolla_.
+Si veda la figura
+[Copia e incolla](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/copy-paste.gif).
 
 ![Copia e incolla](demo/copy-paste.gif)
 
-#### Media
-
-##### Screenshot
+#### Screenshot
 
 Cattura un'istantanea dell'applicazione. Nell'esempio la schermata
 catturata è salvata in una directory temporanea e immediatamente
 visualizzata con il viewer di default per le immagini.
 
-Si veda la figura _Screenshot_.
+Si veda la figura
+[Screenshot](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/screenshot.gif).
 
 ![Screenshot](demo/screenshot.gif)
 
