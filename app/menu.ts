@@ -119,7 +119,7 @@ export default class MenuBuilder {
         },
         {
           label: 'Developer Tools',
-          accelerator: 'Alt+Command+I',
+          accelerator: 'F12',
           click: () => {
             this.mainWindow.webContents.toggleDevTools();
           },
@@ -211,7 +211,7 @@ export default class MenuBuilder {
           },
           {
             label: '&Developer tools',
-            accelerator: 'Alt+Ctrl+I',
+            accelerator: 'F12',
             click: () => {
               this.mainWindow.webContents.toggleDevTools();
             },
