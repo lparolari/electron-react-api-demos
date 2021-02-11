@@ -1,7 +1,7 @@
 {
-  "name": "electron-demo",
-  "productName": "ElectronDemo",
-  "description": "Electron demo TODO",
+  "name": "electron-react-api-demos",
+  "productName": "electron-react-api-demos",
+  "description": "Electron React API demos is a simple application written in Electron.js + React.js with TypeScript that shows by examples some of the main features from Electron.js framework.",
   "scripts": {
     "build": "concurrently \"yarn build-main\" \"yarn build-renderer\"",
     "build-dll": "cross-env NODE_ENV=development webpack --config ./configs/webpack.config.renderer.dev.dll.babel.js --colors",
@@ -51,8 +51,8 @@
     ]
   },
   "build": {
-    "productName": "ElectronDemo",
-    "appId": "com.lparolari.electrondemo",
+    "productName": "electron-react-api-demos",
+    "appId": "com.lparolari.electron.demo",
     "files": [
       "dist/",
       "node_modules/",
@@ -93,7 +93,8 @@
       "output": "release"
     },
     "extraResources": [
-      "./resources/**"
+      "./resources/**",
+      "./app/**"
     ],
     "publish": {
       "provider": "github",
@@ -117,15 +118,11 @@
   },
   "keywords": [
     "electron",
-    "boilerplate",
     "react",
-    "redux",
-    "typescript",
-    "ts",
-    "sass",
-    "webpack",
-    "hot",
-    "reload"
+    "learning",
+    "framework",
+    "cross-platform",
+    "desktop"
   ],
   "homepage": "https://github.com/lparolari/electron-react-api-demos#readme",
   "jest": {
