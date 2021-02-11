@@ -111,6 +111,13 @@ La demo implementa alcune funzionalità interessanti di Electron.js e
 mostra tramite esempi e snippet di codice come è possibile utilizzare
 il framework per costruire un'applicazione vera e propria.
 
+Ecco due schermate che mostrano come l'applicazione si presenta su
+Windows e su Linux.
+
+![Demo su Windows](demo/windows.png)
+
+![Demo su Linux](demo/linux.png)
+
 ### Struttura
 
 L'applicazione è stata creata a partire da una boilerplate predisposta
@@ -195,8 +202,6 @@ look & feel nativo alla finestra e consente di creare finestre modali.
 Si veda la figura
 [Finestra con bordi](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/framed-window.gif).
 
-![Finestra con bordi](demo/framed-window.gif)
-
 #### Frameless Window
 
 Crea una finestra senza bordi. Può essere utilizzata principalmente
@@ -207,15 +212,11 @@ richiede interazione obbligatoria.
 Si veda la figura
 [Finestra senza bordi](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/frameless-window.gif).
 
-![Finestra senza bordi](demo/frameless-window.gif)
-
 #### Managed Window
 
 Crea una finestre e il chiamante ha accesso alle sue proprietà: può
 leggerle o modificarle. Si veda la figura
 [Finestra gestita](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/managed-window.gif).
-
-![Finestra gestita](demo/managed-window.gif)
 
 #### Events Window
 
@@ -224,8 +225,6 @@ finestra può offrire, nell'esempio la perdita del focus. Si veda la
 figura
 [Finestra con eventi](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/events-window.gif).
 
-![Finestra con eventi](demo/events-window.gif)
-
 #### Menu Applicazione
 
 Crea o modifica il menu dell'applicazione per inserire funzionalità
@@ -233,8 +232,6 @@ contestuali alle operazioni che l'utente sta svolgendo.
 
 Si veda la figura
 [Menu applicazione](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/app-menu.gif).
-
-![Menu applicazione](demo/app-menu.gif)
 
 #### Menu Contestuale
 
@@ -246,8 +243,6 @@ _click tasto destro_.
 Si veda la figura
 [Menu contestuale](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/context-menu.gif).
 
-![Menu contestuale](demo/context-menu.gif)
-
 #### Gestore file
 
 Apre il gestore dei file del sistema operativo su una cartella
@@ -255,8 +250,6 @@ specificata, nell'esempio la home dell'utente (cross-platform).
 
 Si veda la figura
 [Gestore file](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/open-home-files.gif).
-
-![Gestore file](demo/open-home-files.gif)
 
 #### Risorsa esterna
 
@@ -267,8 +260,6 @@ Nell'esempio viene aperto un link a Google.
 Si veda la figura
 [Risorsa esterna](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/open-browser.gif).
 
-![Risorsa esterna](demo/open-browser.gif)
-
 Invia una notifica mostrata tramite il sistema operativo come una
 notifica nativa. Le notifiche in Electron.js sono personalizzabili ma
 il supporto cross-platform è limitato e la notifica visualizzata
@@ -276,8 +267,6 @@ dipende molto dal sistema operativo.
 
 Si veda la figura
 [Notifiche](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/notifications.gif).
-
-![Notifiche](demo/notifications.gif)
 
 #### Tray
 
@@ -287,8 +276,6 @@ interagire anche avendo l'app in background.
 
 Si veda la figura
 [Tray](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/tray.gif).
-
-![Tray](demo/tray.gif)
 
 #### Messaggi asincroni
 
@@ -304,8 +291,6 @@ Nell'esempio il renderer invia il messaggio `ping` e il main risponde
 con `pong`. Si veda la figura
 [Messaggi asincroni](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/async-messages.gif).
 
-![Messaggi asincroni](demo/async-messages.gif)
-
 #### Informazioni app e sistema
 
 Accede a informazioni dell'applicazione e del sistema operativo.
@@ -318,8 +303,6 @@ utilizzato per l'app.
 Si veda la figura
 [Informazioni app e sistema](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/info.png).
 
-![Informazioni app e sistema](demo/info.png)
-
 #### Copia e incolla
 
 Utilizza la clipboard del sistema operativo per copiare e incollare
@@ -327,8 +310,6 @@ testo.
 
 Si veda la figura
 [Copia e incolla](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/copy-paste.gif).
-
-![Copia e incolla](demo/copy-paste.gif)
 
 #### Screenshot
 
@@ -338,8 +319,6 @@ visualizzata con il viewer di default per le immagini.
 
 Si veda la figura
 [Screenshot](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/screenshot.gif).
-
-![Screenshot](demo/screenshot.gif)
 
 ## Electron.js
 
