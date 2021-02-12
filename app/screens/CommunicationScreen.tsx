@@ -3,7 +3,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
 import PaddedContainer from '../components/Container/Container';
-import MessagesTabs from './Communication/Tabs';
+import MessagesTabs from '../components/Tabs/MessagesTabs';
 
 export default function CommunicationScreen() {
   return (

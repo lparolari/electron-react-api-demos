@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PrimaryDemoButton from '../../../components/DemoButton/Primary';
+import PrimaryDemoButton from '../../components/DemoButton/Primary';
 
 export type Props = React.ComponentProps<typeof PrimaryDemoButton>;
 

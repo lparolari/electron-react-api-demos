@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Paper from '@material-ui/core/Paper';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-import AsyncMessageTab from './AsyncMessageTab/Tab';
+import AsyncMessageTab from '../../features/AsyncMessage/Tab';
 
 export default function MessagesTabs() {
   const [tab, setTab] = React.useState(0);

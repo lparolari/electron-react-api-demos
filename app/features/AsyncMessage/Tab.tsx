@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-import DemoSource from '../../../components/DemoSource/DemoSource';
-import TabPanel from '../../../components/TabPanel/TabPanel';
+import DemoSource from '../../components/DemoSource/DemoSource';
+import TabPanel from '../../components/TabPanel/TabPanel';
 import {
   addMainListener,
   addRendererListener,
@@ -16,7 +16,7 @@ import MainListenerButton from './MainListenerButton';
 import PingButton from './PingButton';
 import PongBox from './PongBox';
 import RendererListenerButton from './RendererListenerButton';
-import ExternalUrl from '../../../components/ExternalUrl/ExternalUrl';
+import ExternalUrl from '../../components/ExternalUrl/ExternalUrl';
 import Desc from './Desc';
 
 export type Props = { value: number; index: number };
@@ -35,7 +35,7 @@ export default function AsyncMessageTab({ value, index }: Props) {
       value={value}
       index={index}
       sourceCode={
-        <DemoSource relativePahToCodeFile="screens/Communication/AsyncMessageTab/demo/demo.ts" />
+        <DemoSource relativePahToCodeFile="features/AsyncMessage/demo/demo.ts" />
       }
       documentation={
         <>

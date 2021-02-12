@@ -2,7 +2,7 @@ import React from 'react';
 
 import Typography from '@material-ui/core/Typography';
 
-import Description from '../../../components/Description/Description';
+import Description from '../../components/Description/Description';
 
 export default function Desc() {
   return (
