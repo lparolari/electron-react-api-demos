@@ -4,9 +4,9 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 import PaddedContainer from '../components/Container/Container';
-import NotificationTabs from './NativeUserInterface/Notification/Tabs';
-import OpenExternalTabs from './NativeUserInterface/OpenExternal/Tabs';
-import TrayTabs from './NativeUserInterface/Tray/Tabs';
+import NotificationTabs from '../components/Tabs/NotificationsTabs';
+import OpenExternalTabs from '../components/Tabs/OpenExternalTabs';
+import TrayTabs from '../components/Tabs/TrayTabs';
 
 export default function NativeUserInterfaceScreen() {
   return (

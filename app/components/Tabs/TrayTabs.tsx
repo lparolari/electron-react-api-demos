@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 
-import TrayTab from './Add/Tab';
+import TrayTab from '../../features/AddTray/Tab';
 
 export default function TrayTabs() {
   const [tab, setTab] = React.useState(0);

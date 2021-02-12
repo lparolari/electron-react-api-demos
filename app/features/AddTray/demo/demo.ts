@@ -1,5 +1,5 @@
 import { remote } from 'electron';
-import path from '../../../../../constants/path';
+import path from '../../../constants/path';
 
 export default function addToTray() {
   const tray = new remote.Tray(path('../resources/icons/32x32.png'));
