@@ -151,6 +151,14 @@ Electron.js per poter integrare le sue funzionalità.
 ```
 .
 |-- app
+|   |-- components
+|   |-- constants
+|   |-- containers
+|   |-- dist
+|   |-- features
+|   |-- node_modules
+|   |-- screens
+|   `-- utils
 |-- configs
 |-- dll
 |-- docs
@@ -164,7 +172,12 @@ Electron.js per poter integrare le sue funzionalità.
 In ordine troviamo
 
 - `app`, con il codice sorgente dell'applicazione (principalmente
-  React.js);
+  React.js). Questa cartella è strutturata con in altre sottocartelle
+  per favorire la separazione dei componenti, ma a grandi linee le
+  cartelle rilevanti sono `screens` e `features`. La prima contiene le
+  schermate che vengono visualizzate all'utente mentre naviga il menu
+  mentre la seconda contiene tutte le features implementate di
+  Electron.js;
 
 - `configs`, con le configurazioni [webpack](https://webpack.js.org/)
   ovvero lo strumento per costruire dei bundle ottimizzati per
@@ -186,7 +199,7 @@ In ordine troviamo
 - `test`, con i test di unità dell'applicazione.
 
 > Attenzione! La navigazioe della cartella `app` richiede la
-> conoscenza di React.js.
+> conoscenza di React.js e JavaScript in generale.
 
 ### Funzionalità
 
@@ -199,7 +212,7 @@ In ordine troviamo
 Crea una finestra con il frame del sistema operativo. Conferisce un
 look & feel nativo alla finestra e consente di creare finestre modali.
 
-Si veda la figura
+Si veda la figura animata
 [Finestra con bordi](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/framed-window.gif).
 
 #### Frameless Window
@@ -209,13 +222,15 @@ per (1) personalizzare il look & feel dell'applicazione oppure (2)
 bloccare l'interazione dell'utente sulla finestra (modale) che
 richiede interazione obbligatoria.
 
-Si veda la figura
+Si veda la figura animata
 [Finestra senza bordi](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/frameless-window.gif).
 
 #### Managed Window
 
 Crea una finestre e il chiamante ha accesso alle sue proprietà: può
-leggerle o modificarle. Si veda la figura
+leggerle o modificarle.
+
+Si veda la figura animata
 [Finestra gestita](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/managed-window.gif).
 
 #### Events Window
@@ -230,7 +245,7 @@ figura
 Crea o modifica il menu dell'applicazione per inserire funzionalità
 contestuali alle operazioni che l'utente sta svolgendo.
 
-Si veda la figura
+Si veda la figura animata
 [Menu applicazione](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/app-menu.gif).
 
 #### Menu Contestuale
@@ -240,15 +255,22 @@ come la pressione di un pulsante oppure il click del tasto destro. Per
 la seconda operazione bisogna registrare un callback sull'evento
 _click tasto destro_.
 
-Si veda la figura
+Si veda la figura animata
 [Menu contestuale](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/context-menu.gif).
+Le figure [Menu contestuale su Windows](images/menu-win.png) e
+[Menu contestuale su Linux](images/menu-linux.png) mostrano come
+Electron.js si comporta su due sistemi diversi come Windows e Linux.
+
+![Menu contestuale su Windows](images/menu-win.png)
+
+![Menu contestuale su Linux](images/menu-linux.png)
 
 #### Gestore file
 
 Apre il gestore dei file del sistema operativo su una cartella
 specificata, nell'esempio la home dell'utente (cross-platform).
 
-Si veda la figura
+Si veda la figura animata
 [Gestore file](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/open-home-files.gif).
 
 #### Risorsa esterna
@@ -257,16 +279,25 @@ Apre la una risorsa estarna identificata da un URI tramite
 l'applicazione di default che gestisce il protocollo della risorsa.
 Nell'esempio viene aperto un link a Google.
 
-Si veda la figura
+Si veda la figura animata
 [Risorsa esterna](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/open-browser.gif).
+
+#### Notifiche
 
 Invia una notifica mostrata tramite il sistema operativo come una
 notifica nativa. Le notifiche in Electron.js sono personalizzabili ma
 il supporto cross-platform è limitato e la notifica visualizzata
 dipende molto dal sistema operativo.
 
-Si veda la figura
+Si veda la figura animata
 [Notifiche](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/notifications.gif).
+Le figure [Notifica su Windows](images/notification-win.png) e
+[Notifica su Linux](images/notification-linux.png) mostrano come
+Electron.js si comporta su due sistemi diversi come Windows e Linux.
+
+![Notifica su Windows](images/notification-win.png)
+
+![Notifica su Linux](images/notification-linux.png)
 
 #### Tray
 
@@ -274,8 +305,15 @@ Crea un'icona nel tray del sistema operavo. L'icona del tray può
 essere arricchita con diverse funzionalità con cui l'utente può
 interagire anche avendo l'app in background.
 
-Si veda la figura
+Si veda la figura animata
 [Tray](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/tray.gif).
+Le figure [Tray su Windows](images/tray-win.png) e
+[Tray su Linux](images/tray-linux.png) mostrano come Electron.js si
+comporta su due sistemi diversi come Windows e Linux.
+
+![Tray su Windows](images/tray-win.png)
+
+![Tray su Linux](images/tray-linux.png)
 
 #### Messaggi asincroni
 
@@ -288,7 +326,7 @@ intuitive che permettono di aggiungere _callback_ su canali ed inviare
 messaggi su canali.
 
 Nell'esempio il renderer invia il messaggio `ping` e il main risponde
-con `pong`. Si veda la figura
+con `pong`. Si veda la figura animata
 [Messaggi asincroni](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/async-messages.gif).
 
 #### Informazioni app e sistema
@@ -300,7 +338,7 @@ installazione dell'applicazione, la versione di Electron.js in uso, il
 percorso della cartella utente e le dimensioni dello schemro
 utilizzato per l'app.
 
-Si veda la figura
+Si veda la figura animata
 [Informazioni app e sistema](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/info.png).
 
 #### Copia e incolla
@@ -308,7 +346,7 @@ Si veda la figura
 Utilizza la clipboard del sistema operativo per copiare e incollare
 testo.
 
-Si veda la figura
+Si veda la figura animata
 [Copia e incolla](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/copy-paste.gif).
 
 #### Screenshot
@@ -317,8 +355,15 @@ Cattura un'istantanea dell'applicazione. Nell'esempio la schermata
 catturata è salvata in una directory temporanea e immediatamente
 visualizzata con il viewer di default per le immagini.
 
-Si veda la figura
+Si veda la figura animata
 [Screenshot](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/screenshot.gif).
+Le figure [Screenshot su Windows](images/menu-win.png) e
+[Screenshot su Linux](images/menu-linux.png) mostrano come Electron.js
+si comporta su due sistemi diversi come Windows e Linux.
+
+![Screenshot su Windows](images/menu-win.png)
+
+![Screenshot su Linux](images/menu-linux.png)
 
 ## Electron.js
 
@@ -574,15 +619,22 @@ strumento.
 
 ## Riferimenti
 
-TODO:
+1. [https://medium.com/\@voltx180/a-beginners-guide-to-electron-js-1679fd7b6e4f](https://medium.com/@voltx180/a-beginners-guide-to-electron-js-1679fd7b6e4f)
 
-1. https://medium.com/@voltx180/a-beginners-guide-to-electron-js-1679fd7b6e4f
-2. https://codeburst.io/electron-basics-and-fundamentals-b85b23aa611d
-3. https://www.hongkiat.com/blog/frameworks-tools-build-cross-platform-desktop-apps/
-4. https://www.slideshare.net/bethmigunasekara/electron-js-114413534
-5. [Electron Framework Presentation](https://slides.com/juliamaksimchik/electron-awesome#/29/0/1)
-6. https://medium.com/@nalegaveshardul40/electron-pros-and-cons-8f58fd6313d5
-7. [Electron.js- The Best Framework to Build Cross-Platform Desktop Apps](https://www.techomoro.com/electron-js-the-best-framework-to-build-cross-platform-desktop-applications/)
-8. https://haxe.org/
-9. [Technical Differences Between Electron and NW.js | Electron](https://www.electronjs.org/docs/development/electron-vs-nwjs)
-10. [About Qt - Qt Wiki](https://wiki.qt.io/About_Qt)
+2. [https://codeburst.io/electron-basics-and-fundamentals-b85b23aa611d](https://codeburst.io/electron-basics-and-fundamentals-b85b23aa611d)
+
+3. [https://www.hongkiat.com/blog/frameworks-tools-build-cross-platform-desktop-apps/](https://www.hongkiat.com/blog/frameworks-tools-build-cross-platform-desktop-apps/)
+
+4. [https://www.slideshare.net/bethmigunasekara/electron-js-114413534](https://www.slideshare.net/bethmigunasekara/electron-js-114413534)
+
+5. [https://slides.com/juliamaksimchik/electron-awesome#/29/0/1](https://slides.com/juliamaksimchik/electron-awesome#/29/0/1)
+
+6. [https://medium.com/\@nalegaveshardul40/electron-pros-and-cons-8f58fd6313d5](https://medium.com/@nalegaveshardul40/electron-pros-and-cons-8f58fd6313d5)
+
+7. [https://www.techomoro.com/electron-js-the-best-framework-to-build-cross-platform-desktop-applications/](https://www.techomoro.com/electron-js-the-best-framework-to-build-cross-platform-desktop-applications/)
+
+8. [https://haxe.org/](https://haxe.org/)
+
+9. [https://www.electronjs.org/docs/development/electron-vs-nwjs](https://www.electronjs.org/docs/development/electron-vs-nwjs)
+
+10. [https://wiki.qt.io/About_Qt](https://wiki.qt.io/About_Qt)
