@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import GithubIcon from '@material-ui/icons/GitHub';
 import HelpIcon from '@material-ui/icons/Help';
+import InfoIcon from '@material-ui/icons/Info';
 import MenuIcon from '@material-ui/icons/Menu';
 
 import { routeName } from '../../constants/routes';
@@ -136,7 +137,7 @@ export default function App({ children }: Props) {
           </Typography>
           <IconButton
             color="inherit"
-            title="Electron.js Documentation"
+            title="Documentazione Electron.js"
             onClick={() =>
               shell.openExternal('https://www.electronjs.org/docs')
             }
@@ -145,7 +146,18 @@ export default function App({ children }: Props) {
           </IconButton>
           <IconButton
             color="inherit"
-            title="Electron Demo React source on GitHub"
+            title="Guida/documentazione App"
+            onClick={() =>
+              shell.openExternal(
+                'https://github.com/lparolari/electron-react-api-demos/blob/master/docs/README.md'
+              )
+            }
+          >
+            <InfoIcon />
+          </IconButton>
+          <IconButton
+            color="inherit"
+            title="Codice sorgente su GitHub"
             onClick={() =>
               shell.openExternal(
                 'https://github.com/lparolari/electron-react-api-demos'
