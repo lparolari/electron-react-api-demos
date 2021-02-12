@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-import PrimaryDemoButton from '../../../components/DemoButton/Primary';
-import DemoSource from '../../../components/DemoSource/DemoSource';
-import ExternalUrl from '../../../components/ExternalUrl/ExternalUrl';
-import TabPanel from '../../../components/TabPanel/TabPanel';
+import PrimaryDemoButton from '../../components/DemoButton/Primary';
+import DemoSource from '../../components/DemoSource/DemoSource';
+import ExternalUrl from '../../components/ExternalUrl/ExternalUrl';
+import TabPanel from '../../components/TabPanel/TabPanel';
 import captureScreenshot from './demo/demo';
 
 export type Props = { value: number; index: number };
@@ -20,8 +20,8 @@ export default function ScreenshotTab({ value, index }: Props) {
       index={index}
       sourceCode={
         <>
-          <DemoSource relativePahToCodeFile="screens/Media/ScreenshotTab/demo/demo.ts" />
-          <DemoSource relativePahToCodeFile="screens/Media/ScreenshotTab/Tab.tsx" />
+          <DemoSource relativePahToCodeFile="features/Screenshot/demo/demo.ts" />
+          <DemoSource relativePahToCodeFile="features/Screenshot/Tab.tsx" />
         </>
       }
       documentation={
