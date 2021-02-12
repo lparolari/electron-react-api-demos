@@ -5,10 +5,10 @@ import Suspense from './components/Suspense/Suspense';
 import routes from './constants/routes';
 import App from './containers/App/App';
 import HomePage from './screens/HomeScreen';
-import ManagedWindow from './screens/Window/ManagedWindow/Window';
-import NewBorderlessWindow from './screens/Window/NewFramelessWindow/Window';
-import NewWindow from './screens/Window/NewWindow/Window';
-import UsingEventsWindow from './screens/Window/UsingEventsWindow/Window';
+import ManagedWindow from './features/ManagedWindow/Window';
+import NewBorderlessWindow from './features/NewFramelessWindow/Window';
+import NewWindow from './features/NewWindow/Window';
+import UsingEventsWindow from './features/UsingEventsWindow/Window';
 
 // Lazily load routes and code split with webpack
 const LazyWindowScreen = React.lazy(() =>

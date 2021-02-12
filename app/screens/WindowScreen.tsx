@@ -7,10 +7,10 @@ import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
 
 import PaddedContainer from '../components/Container/Container';
-import ManagedWindowTab from './Window/ManagedWindow/Tab';
-import NewFramelessWindowTab from './Window/NewFramelessWindow/Tab';
-import NewWindowTab from './Window/NewWindow/Tab';
-import UsingEventsWindowTab from './Window/UsingEventsWindow/Tab';
+import ManagedWindowTab from '../features/ManagedWindow/Tab';
+import NewFramelessWindowTab from '../features/NewFramelessWindow/Tab';
+import NewWindowTab from '../features/NewWindow/Tab';
+import UsingEventsWindowTab from '../features/UsingEventsWindow/Tab';
 
 export default function WindowScreen() {
   const [tab, setTab] = React.useState(0);

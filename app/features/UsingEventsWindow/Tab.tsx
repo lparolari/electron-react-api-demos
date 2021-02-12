@@ -3,11 +3,11 @@ import React, { useEffect, useState } from 'react';
 
 import Grid from '@material-ui/core/Grid';
 
-import DemoSource from '../../../components/DemoSource/DemoSource';
-import TabPanel from '../../../components/TabPanel/TabPanel';
-import routes from '../../../constants/routes';
-import url from '../../../constants/url';
-import Doc from '../Doc';
+import DemoSource from '../../components/DemoSource/DemoSource';
+import TabPanel from '../../components/TabPanel/TabPanel';
+import routes from '../../constants/routes';
+import url from '../../constants/url';
+import Doc from '../../screens/Window/Doc';
 import DemoButton from './DemoButton';
 import FocusButton from './FocusButton';
 
@@ -53,7 +53,7 @@ export default function UsingEventsWindowTab(props: TabPanelProps) {
     <TabPanel
       {...props}
       sourceCode={
-        <DemoSource relativePahToCodeFile="screens/Window/UsingEventsWindow/Tab.tsx" />
+        <DemoSource relativePahToCodeFile="features/UsingEventsWindow/Tab.tsx" />
       }
       documentation={<Doc />}
     >
