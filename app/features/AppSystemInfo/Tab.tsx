@@ -2,7 +2,7 @@ import React from 'react';
 
 import Grid from '@material-ui/core/Grid';
 
-import TabPanel from '../../../components/TabPanel/TabPanel';
+import TabPanel from '../../components/TabPanel/TabPanel';
 import Doc from './Doc';
 import Info from './Info';
 import Source from './Source';

@@ -1,6 +1,6 @@
 import { dialog, remote, shell } from 'electron';
 
-import path from '../../../../constants/path';
+import path from '../../../constants/path';
 
 function addProtocolHandler() {
   remote.app.setAsDefaultProtocolClient('electron-demo-react');

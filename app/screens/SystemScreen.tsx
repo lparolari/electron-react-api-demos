@@ -3,7 +3,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
 import PaddedContainer from '../components/Container/Container';
-import SystemTabs from './System/Tabs';
+import SystemTabs from '../components/Tabs/SystemTabs';
 
 export default function SystemScreen() {
   return (

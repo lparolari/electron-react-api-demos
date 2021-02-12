@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 
-import TabPanel from '../../../components/TabPanel/TabPanel';
+import TabPanel from '../../components/TabPanel/TabPanel';
 import CopyButton from './Copy';
 import { copy, paste } from './demo/demo';
 import Doc from './Doc';

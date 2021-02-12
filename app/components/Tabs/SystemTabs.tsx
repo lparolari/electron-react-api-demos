@@ -4,9 +4,9 @@ import AppBar from '@material-ui/core/AppBar';
 import Paper from '@material-ui/core/Paper';
 import Tab from '@material-ui/core/Tab';
 import Tabs from '@material-ui/core/Tabs';
-import InfoTab from './InfoTab/Tab';
-import CopyPasteTab from './CopyPasteTab/Tab';
-import ProtocolHandlerTab from './ProtocolHandlerTab/Tab';
+import InfoTab from '../../features/AppSystemInfo/Tab';
+import CopyPasteTab from '../../features/CopyPaste/Tab';
+import ProtocolHandlerTab from '../../features/ProtocolHandler/Tab';
 
 export default function SystemTabs() {
   const [tab, setTab] = React.useState(0);

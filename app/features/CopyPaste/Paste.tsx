@@ -1,13 +1,13 @@
 import React from 'react';
 
-import PrimaryDemoButton from '../../../components/DemoButton/Primary';
+import PrimaryDemoButton from '../../components/DemoButton/Primary';
 
 export type Props = React.ComponentProps<typeof PrimaryDemoButton>;
 
-export default function CopyButton({ onClick, ...rest }: Props) {
+export default function PasteButton({ onClick, ...rest }: Props) {
   return (
     <PrimaryDemoButton onClick={onClick} {...rest}>
-      Copia
+      Incolla
     </PrimaryDemoButton>
   );
 }

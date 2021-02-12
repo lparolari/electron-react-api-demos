@@ -3,10 +3,10 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-import PrimaryDemoButton from '../../../components/DemoButton/Primary';
-import SecondaryDemoButton from '../../../components/DemoButton/Secondary';
-import DemoSource from '../../../components/DemoSource/DemoSource';
-import TabPanel from '../../../components/TabPanel/TabPanel';
+import PrimaryDemoButton from '../../components/DemoButton/Primary';
+import SecondaryDemoButton from '../../components/DemoButton/Secondary';
+import DemoSource from '../../components/DemoSource/DemoSource';
+import TabPanel from '../../components/TabPanel/TabPanel';
 import { addProtocolHandler, openExternalPage } from './demo/demo';
 import Doc from './Doc';
 
@@ -18,7 +18,7 @@ export default function ProtocolHandlerTab({ value, index }: Props) {
       value={value}
       index={index}
       sourceCode={
-        <DemoSource relativePahToCodeFile="screens/System/ProtocolHandlerTab/demo/demo.ts" />
+        <DemoSource relativePahToCodeFile="features/ProtocolHandler/demo/demo.ts" />
       }
       documentation={<Doc />}
     >
