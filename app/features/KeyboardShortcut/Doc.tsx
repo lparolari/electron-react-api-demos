@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Typography from '@material-ui/core/Typography';
-import ExternalUrl from '../../../components/ExternalUrl/ExternalUrl';
+import ExternalUrl from '../../components/ExternalUrl/ExternalUrl';
 
 export default function Doc() {
   return (

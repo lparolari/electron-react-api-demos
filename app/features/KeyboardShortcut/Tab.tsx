@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Grid } from '@material-ui/core';
 
-import DemoSource from '../../../components/DemoSource/DemoSource';
-import TabPanel from '../../../components/TabPanel/TabPanel';
+import DemoSource from '../../components/DemoSource/DemoSource';
+import TabPanel from '../../components/TabPanel/TabPanel';
 import BindKeyboardShortcutButton from './BindKeyboardShortcutButton';
 import Doc from './Doc';
 import UnbindKeyboardShortcutButton from './UnbindKeyboardShortcutButton';

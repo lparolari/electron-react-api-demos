@@ -1,7 +1,7 @@
 import { remote } from 'electron';
 import React from 'react';
 
-import SecondaryDemoButton from '../../../components/DemoButton/Secondary';
+import SecondaryDemoButton from '../../components/DemoButton/Secondary';
 
 export default function ResetButton() {
   return (

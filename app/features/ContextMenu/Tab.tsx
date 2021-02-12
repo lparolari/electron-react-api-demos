@@ -1,8 +1,8 @@
 import { Grid } from '@material-ui/core';
 import React from 'react';
 
-import DemoSource from '../../../components/DemoSource/DemoSource';
-import TabPanel from '../../../components/TabPanel/TabPanel';
+import DemoSource from '../../components/DemoSource/DemoSource';
+import TabPanel from '../../components/TabPanel/TabPanel';
 import Doc from './Doc';
 import OpenMenuButton from './OpenMenuButton';
 import RegisterRightClickButton from './RegisterRightClickButton';
