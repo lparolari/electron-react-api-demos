@@ -6,7 +6,7 @@ import DemoSource from '../../components/DemoSource/DemoSource';
 import TabPanel from '../../components/TabPanel/TabPanel';
 import DemoButton from './DemoButton';
 import Show from './Show';
-import Doc from '../../screens/Window/Doc';
+import Doc from '../../components/WindowDoc';
 import createManagedWindow from './demo/demo';
 
 type TabPanelProps = { value: number; index: number };

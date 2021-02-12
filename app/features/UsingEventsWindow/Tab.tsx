@@ -7,7 +7,7 @@ import DemoSource from '../../components/DemoSource/DemoSource';
 import TabPanel from '../../components/TabPanel/TabPanel';
 import routes from '../../constants/routes';
 import url from '../../constants/url';
-import Doc from '../../screens/Window/Doc';
+import Doc from '../../components/WindowDoc';
 import DemoButton from './DemoButton';
 import FocusButton from './FocusButton';
 

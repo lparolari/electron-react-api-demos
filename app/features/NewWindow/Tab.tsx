@@ -2,7 +2,7 @@ import React from 'react';
 
 import DemoSource from '../../components/DemoSource/DemoSource';
 import TabPanel from '../../components/TabPanel/TabPanel';
-import Doc from '../../screens/Window/Doc';
+import Doc from '../../components/WindowDoc';
 import createFramedWindowWithMenu from './demo/demo';
 import DemoButton from './DemoButton';
 
