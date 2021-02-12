@@ -16,7 +16,7 @@ export default function KeyboardShortcutTab({ value, index }: Props) {
       value={value}
       index={index}
       sourceCode={
-        <DemoSource relativePahToCodeFile="screens/Menu/KeyboardShortcut/demo/demo.ts" />
+        <DemoSource relativePahToCodeFile="features/KeyboardShortcut/demo/demo.ts" />
       }
       documentation={<Doc />}
     >

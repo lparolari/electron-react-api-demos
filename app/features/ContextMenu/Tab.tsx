@@ -15,7 +15,7 @@ export default function ContextMenuTab({ value, index }: Props) {
       value={value}
       index={index}
       sourceCode={
-        <DemoSource relativePahToCodeFile="screens/Menu/ContextMenu/demo/demo.ts" />
+        <DemoSource relativePahToCodeFile="features/ContextMenu/demo/demo.ts" />
       }
       documentation={<Doc />}
     >

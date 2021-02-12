@@ -16,7 +16,7 @@ export default function ApplicationMenuTab({ value, index }: Props) {
       value={value}
       index={index}
       sourceCode={
-        <DemoSource relativePahToCodeFile="screens/Menu/ApplicationMenu/demo/demo.ts" />
+        <DemoSource relativePahToCodeFile="features/ApplicationMenu/demo/demo.ts" />
       }
       documentation={<Doc />}
     >
