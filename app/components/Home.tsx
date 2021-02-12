@@ -10,6 +10,7 @@ import SyntaxHighlighter, {
   getCodeStrngFromPath,
 } from './SyntaxHighlighter/SyntaxHighlighter';
 import path from '../constants/path';
+import ExternalUrl from './ExternalUrl/ExternalUrl';
 
 export default function Home(): JSX.Element {
   return (
@@ -17,7 +18,7 @@ export default function Home(): JSX.Element {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <Typography variant="h3" gutterBottom>
-            Electron React Demo
+            Electron React API demos
           </Typography>
         </Grid>
         <Grid item>
@@ -41,6 +42,31 @@ export default function Home(): JSX.Element {
               <Typography>il codice sorgente della demo</Typography>
             </li>
           </ul>
+          <Typography paragraph>
+            Se vuoi sapere di più sui dettagli tecnici dell&apos;applicazione
+            visita il{' '}
+            <ExternalUrl
+              url={
+                new URL(
+                  'https://github.com/lparolari/electron-react-api-demos#readme'
+                )
+              }
+            >
+              README
+            </ExternalUrl>{' '}
+            del progetto, altrimenti per dettagli scelte implementative,
+            features e considerazioni sul framework Electron.js visita la{' '}
+            <ExternalUrl
+              url={
+                new URL(
+                  'https://github.com/lparolari/electron-react-api-demos/blob/master/docs/README.md'
+                )
+              }
+            >
+              guida
+            </ExternalUrl>
+            .
+          </Typography>
         </Grid>
         <Grid item>
           <Typography variant="h6" gutterBottom>
@@ -59,7 +85,11 @@ export default function Home(): JSX.Element {
           </Typography>
           <Typography paragraph>
             Naviga e prova le varie funzionalità offerte dall&apos;applicazione:
-            accedi alle features dal menu a lato.
+            accedi alle features dal menu a lato. Il codice sorgente mostrato
+            dall&apos;applicazione omette qualche dettaglio per semplificarne la
+            lettura, se vuoi visualizzare tutto il codice sorgente puoi navigare
+            il codice sorgente in <code>app/features</code>. Trovi tutto il
+            codice nessario per ogni feature suddiviso in semplici moduli.
           </Typography>
           <Typography>
             L&apos;icona <CodeIcon /> ti permette di visualizzare il codice
