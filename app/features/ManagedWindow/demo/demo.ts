@@ -20,8 +20,14 @@ const createManagedWindow = (
 
   win.setMenu(null);
 
+  onResize(win.getSize());
+
   win.on('move', () => onMove(win.getPosition()));
   win.on('resize', () => onResize(win.getSize()));
+  win.on('closed', () => {
+    onMove([0, 0]);
+    onResize([0, 0]);
+  });
 
   win.loadURL(`${url(routes().window().managed())}`);
   win.show();
