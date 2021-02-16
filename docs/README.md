@@ -111,13 +111,15 @@ La demo implementa alcune funzionalità interessanti di Electron.js e
 mostra tramite esempi e snippet di codice come è possibile utilizzare
 il framework per costruire un'applicazione vera e propria.
 
-Le tre schermate [Demo su Windows](images/example-win.png),
-[Demo su Linux Ubuntu](images/example-ubuntu.png) e
-[Demo su Arch Linux](images/example-arch.png) mostrano come
-l'applicazione si presenta, rispettivamente, su Windows, Linux Ubuntu
-e Arch Linux.[^1] Non avendo a disposizione dispositivi con sistema
-operativo MacOS non sono disponibili demo per il sistema operativo di
-Apple.
+Le tre schermate
+[Demo su Windows](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/images/example-win.png),
+[Demo su Linux Ubuntu](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/images/example-ubuntu.png)
+e
+[Demo su Arch Linux](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/images/example-arch.png)
+mostrano come l'applicazione si presenta, rispettivamente, su Windows,
+Linux Ubuntu e Arch Linux.[^1] Non avendo a disposizione dispositivi
+con sistema operativo MacOS non sono disponibili demo per il sistema
+operativo di Apple.
 
 [^1]:
   Arch Linux è ovviamente Linux-based, ma in questo caso si è voluto
@@ -272,9 +274,12 @@ _click tasto destro_.
 
 Si veda la figura animata
 [Menu contestuale](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/context-menu.gif).
-Le figure [Menu contestuale su Windows](images/menu-win.png) e
-[Menu contestuale su Linux](images/menu-linux.png) mostrano come
-Electron.js si comporta su due sistemi diversi come Windows e Linux.
+Le figure
+[Menu contestuale su Windows](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/images/menu-win.png)
+e
+[Menu contestuale su Linux](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/images/menu-linux.png)
+mostrano come Electron.js si comporta su due sistemi diversi come
+Windows e Linux.
 
 ![Menu contestuale su Windows](images/menu-win.png)
 
@@ -307,9 +312,12 @@ dipende molto dal sistema operativo.
 
 Si veda la figura animata
 [Notifiche](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/notifications.gif).
-Le figure [Notifica su Windows](images/notification-win.png) e
-[Notifica su Linux](images/notification-linux.png) mostrano come
-Electron.js si comporta su due sistemi diversi come Windows e Linux.
+Le figure
+[Notifica su Windows](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/images/notification-win.png)
+e
+[Notifica su Linux](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/images/notification-linux.png)
+mostrano come Electron.js si comporta su due sistemi diversi come
+Windows e Linux.
 
 ![Notifica su Windows](images/notification-win.png)
 
@@ -323,9 +331,12 @@ interagire anche avendo l'app in background.
 
 Si veda la figura animata
 [Tray](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/tray.gif).
-Le figure [Tray su Windows](images/tray-win.png) e
-[Tray su Linux](images/tray-linux.png) mostrano come Electron.js si
-comporta su due sistemi diversi come Windows e Linux.
+Le figure
+[Tray su Windows](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/images/tray-win.png)
+e
+[Tray su Linux](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/images/tray-linux.png)
+mostrano come Electron.js si comporta su due sistemi diversi come
+Windows e Linux.
 
 ![Tray su Windows](images/tray-win.png)
 
@@ -378,9 +389,12 @@ visualizzata con il viewer di default per le immagini.
 
 Si veda la figura animata
 [Screenshot](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/screenshot.gif).
-Le figure [Screenshot su Windows](images/menu-win.png) e
-[Screenshot su Linux](images/menu-linux.png) mostrano come Electron.js
-si comporta su due sistemi diversi come Windows e Linux.
+Le figure
+[Screenshot su Windows](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/images/menu-win.png)
+e
+[Screenshot su Linux](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/images/menu-linux.png)
+mostrano come Electron.js si comporta su due sistemi diversi come
+Windows e Linux.
 
 ![Screenshot su Windows](images/menu-win.png)
 
