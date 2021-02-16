@@ -111,12 +111,16 @@ La demo implementa alcune funzionalità interessanti di Electron.js e
 mostra tramite esempi e snippet di codice come è possibile utilizzare
 il framework per costruire un'applicazione vera e propria.
 
-Ecco due schermate che mostrano come l'applicazione si presenta su
-Windows e su Linux.
+Ecco tre schermate che mostrano come l'applicazione si presenta su
+Windows, Linux Ubuntu e Arch Linux. Non avendo a disposizione
+dispositivi con sistema operativo MacOS non sono disponibili demo per
+il sistema operativo di Apple.
 
-![Demo su Windows](demo/windows.png)
+![Demo su Windows](images/example-win.png)
 
-![Demo su Linux](demo/linux.png)
+![Demo su Linux Ubuntu](images/example-ubuntu.png)
+
+![Demo su Arch Linux](images/example-arch.png)
 
 ### Struttura
 
