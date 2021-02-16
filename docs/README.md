@@ -17,8 +17,8 @@ immagini animate delle demo al link riportato di seguito.
 
 ## Introduzione
 
-L'applicazione desktop _electron-demo-react_ (d'ora in poi riferita
-come _app_ o _demo_) mostra in modo interattivo alcune delle
+L'applicazione desktop _electron-react-api-demos_ (d'ora in poi
+riferita come _app_ o _demo_) mostra in modo interattivo alcune delle
 funzionalità principali del framework
 [Electron.js](https://www.electronjs.org/), approfondendo quindi
 tramite esempi l'utilizzo delle API e degli widget di Electron.js.
@@ -31,19 +31,19 @@ dell'interfaccia utente e al linguaggio di programmazione
 JavaScript, che assicura la _type safety_.
 
 Il seguente documento ha lo scopo di illustrare le funzionalità
-implementate nella demo senza specificare i dettagli tecnici e/o,
+implementate nella demo senza specificarne i dettagli tecnici,
 facilmente reperibili sulla documentazione e nel codice di questo
-progetto, ma facendo in modo di essere una sorta di guida "by
-examples" per alcune funzionalità di Electron.js. Allo stesso tempo
-però la demo sviluppata è utilizzata come un pretesto per studiare ed
-identificare le potenzialità principali di Electron.js, compresi
-relativi svantaggi e punti deboli.
+progetto, così da risultare una sorta di guida "by examples" per
+alcune funzionalità di Electron.js. Allo stesso tempo però la demo
+sviluppata è utilizzata come un pretesto per studiare ed identificare
+le potenzialità principali di Electron.js, compresi relativi svantaggi
+e punti deboli.
 
-La sezione [Conclusioni](#conclusioni) tira le somme sul progetto ed
-in particolare sul framework Electron.js, oggetto dello studio. Alla
-sezione [Demo](#demo) vengono discussi i dettagli della demo
+Alla sezione [Demo](#demo) vengono discussi i dettagli della demo
 sviluppata, mentre alla sezione [Electron.js](#electronjs) viene
-approfondito il framework e le sue caratteristiche.
+approfondito il framework e le sue caratteristiche. La sezione
+[Conclusioni](#conclusioni), invece, tira le somme sul progetto ed in
+particolare sul framework Electron.js, oggetto dello studio.
 
 ## Indice
 
@@ -98,7 +98,7 @@ livello interfaccia grafica è il non supporto out-of-the-box ad un
 look & feel nativo, solitamente preferibile in app dekstop. Per quanto
 riguarda invece i problemi tecnici, lo svantaggio principale è che non
 esiste un sistema integrato che si occupa di differenziare le chiamate
-native a seconda del sistema su cui si eseguie l'applicazione. Di
+native a seconda del sistema su cui si esegue l'applicazione. Di
 fatto, in alcuni casi, il programmatore è chiamato a scrivere del
 codice specifico per ogni piattaforma. Questo complica notevolmente la
 struttura dell'applicazione e allunga i tempi di sviluppo oltre a
@@ -111,10 +111,18 @@ La demo implementa alcune funzionalità interessanti di Electron.js e
 mostra tramite esempi e snippet di codice come è possibile utilizzare
 il framework per costruire un'applicazione vera e propria.
 
-Ecco tre schermate che mostrano come l'applicazione si presenta su
-Windows, Linux Ubuntu e Arch Linux. Non avendo a disposizione
-dispositivi con sistema operativo MacOS non sono disponibili demo per
-il sistema operativo di Apple.
+Le tre schermate [Demo su Windows](images/example-win.png),
+[Demo su Linux Ubuntu](images/example-ubuntu.png) e
+[Demo su Arch Linux](images/example-arch.png) mostrano come
+l'applicazione si presenta, rispettivamente, su Windows, Linux Ubuntu
+e Arch Linux.[^1] Non avendo a disposizione dispositivi con sistema
+operativo MacOS non sono disponibili demo per il sistema operativo di
+Apple.
+
+[^1]:
+  Arch Linux è ovviamente Linux-based, ma in questo caso si è voluto
+  sperimentare il comportamento dell'applicazione su un Desktop
+  Environment come KDE Plasma con KWin come Window Manager.
 
 ![Demo su Windows](images/example-win.png)
 
@@ -139,8 +147,8 @@ definito come "una soluzione completa per costruire e pacchettizzare
 applicazioni Electron.js pronte per la distrubuzione". Questo
 strumento infatti punta a ridurre la complessità della distribuzione
 delle applicazioni gestendo e integrando funzionalità per la
-pacchettizzazione su diverse piattaforme, distribuzione,
-aggiornamenti, ecc.
+pacchettizzazione su diverse piattaforme, distribuzione, e
+aggiornamenti.
 
 ### Codice
 
@@ -179,13 +187,14 @@ In ordine troviamo
   React.js). Questa cartella è strutturata con in altre sottocartelle
   per favorire la separazione dei componenti, ma a grandi linee le
   cartelle rilevanti sono `screens` e `features`. La prima contiene le
-  schermate che vengono visualizzate all'utente mentre naviga il menu
-  mentre la seconda contiene tutte le features implementate di
-  Electron.js;
+  schermate che vengono visualizzate all'utente mentre naviga il menu,
+  mentre la seconda contiene tutte le features (widgets) implementate
+  di Electron.js;
 
-- `configs`, con le configurazioni [webpack](https://webpack.js.org/)
-  ovvero lo strumento per costruire dei bundle ottimizzati per
-  applicazioni JavaScript ed altre eventuali configurazioni;
+- `configs`, con le configurazioni [webpack](https://webpack.js.org/),
+  ovvero lo strumento per costruire bundle ottimizzati per
+  applicazioni JavaScript, più altre eventuali configurazioni
+  personalizzate;
 
 - `dll` ed `internals`, con alcuni file predisposti dalla boilerplate
   per migliorare il funzionamento di Electron.js in fase di sviluppo;
@@ -231,8 +240,8 @@ Si veda la figura animata
 
 #### Managed Window
 
-Crea una finestre e il chiamante ha accesso alle sue proprietà: può
-leggerle o modificarle.
+Crea una finestra (framed o framelss) e il chiamante ha accesso alle
+sue proprietà: può leggerle o modificarle.
 
 Si veda la figura animata
 [Finestra gestita](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/managed-window.gif).
@@ -240,14 +249,16 @@ Si veda la figura animata
 #### Events Window
 
 Crea una finestra e si mette in ascolto di alcuni eventi che la
-finestra può offrire, nell'esempio la perdita del focus. Si veda la
-figura
+finestra può offrire, nell'esempio la perdita del focus.
+
+Si veda la figura
 [Finestra con eventi](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/events-window.gif).
 
 #### Menu Applicazione
 
-Crea o modifica il menu dell'applicazione per inserire funzionalità
-contestuali alle operazioni che l'utente sta svolgendo.
+Crea o modifica il menu dell'applicazione. Viene spesso utilizzato per
+inserire funzionalità contestuali alle operazioni che l'utente sta
+svolgendo e assisterne il workflow.
 
 Si veda la figura animata
 [Menu applicazione](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/app-menu.gif).
@@ -271,8 +282,8 @@ Electron.js si comporta su due sistemi diversi come Windows e Linux.
 
 #### Gestore file
 
-Apre il gestore dei file del sistema operativo su una cartella
-specificata, nell'esempio la home dell'utente (cross-platform).
+Apre il gestore dei file del sistema operativo dato il percorso di
+della cartella, nell'esempio la home dell'utente (cross-platform).
 
 Si veda la figura animata
 [Gestore file](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/open-home-files.gif).
@@ -281,7 +292,8 @@ Si veda la figura animata
 
 Apre la una risorsa estarna identificata da un URI tramite
 l'applicazione di default che gestisce il protocollo della risorsa.
-Nell'esempio viene aperto un link a Google.
+Nell'esempio viene aperto un URL contenente un link a Google che viene
+gestito dal sistema operativo e genera l'apertura di Chrome.
 
 Si veda la figura animata
 [Risorsa esterna](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/open-browser.gif).
@@ -323,14 +335,17 @@ comporta su due sistemi diversi come Windows e Linux.
 
 Utilizza la comunicazione IPC asincrona tra il processo _renderer_ che
 invia il messaggio e il processo _main_ che invece gestisce e risponde
-al messaggio.
+al messaggio. Per maggiori informazioni sui processi di Electron.js si
+veda la sezione [Electron APIs](#electron-apis).
 
-In electron la comunicazione IPC è semplificata da delle API molto
-intuitive che permettono di aggiungere _callback_ su canali ed inviare
-messaggi su canali.
+In Electron.js la comunicazione IPC è semplificata da API molto
+intuitive che permettono di aggiungere _callback_ su canali ed
+inviare/ricevere messaggi sugli stessi.
 
-Nell'esempio il renderer invia il messaggio `ping` e il main risponde
-con `pong`. Si veda la figura animata
+Nell'esempio il processo renderer invia il messaggio `ping` e il
+processo main risponde con `pong`. La comunicazione è asincrona.
+
+Si veda la figura animata
 [Messaggi asincroni](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/async-messages.gif).
 
 #### Informazioni app e sistema
@@ -339,8 +354,8 @@ Accede a informazioni dell'applicazione e del sistema operativo.
 
 Nell'esempio vengono recuperate le informazioni sul path di
 installazione dell'applicazione, la versione di Electron.js in uso, il
-percorso della cartella utente e le dimensioni dello schemro
-utilizzato per l'app.
+percorso della cartella utente e le dimensioni della finestra
+dell'app.
 
 Si veda la figura animata
 [Informazioni app e sistema](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/info.png).
@@ -348,7 +363,9 @@ Si veda la figura animata
 #### Copia e incolla
 
 Utilizza la clipboard del sistema operativo per copiare e incollare
-testo.
+testo. Il testo copiato in clipboard può essere arricchito con, per
+esempio, annotazioni sullo stile del testo, ma ciò deve essere gestito
+esplicitamente dal programmatore.
 
 Si veda la figura animata
 [Copia e incolla](https://github.com/lparolari/electron-react-api-demos/blob/master/docs/demo/copy-paste.gif).
@@ -373,9 +390,9 @@ si comporta su due sistemi diversi come Windows e Linux.
 
 **Cos'è Electron?** Electron.js è un framework cross-platfrom per
 creare applicazione con tecnologie web come JavaScript, HTML e CSS. Le
-applicazione create con Electron.js possono essere facilmente
+applicazioni create con Electron.js possono essere facilmente
 "pacchettizzate" in diversi formati distribuibili ed eseguibili sui
-principali sistemi operativi in uso attualmente: macOS, Windows e
+principali sistemi operativi in uso attualmente: MacOS, Windows e
 Linux. Ciò è reso possibile grazie a strumenti come Node.js per
 l'interazione con il file system e con il sistema operativo e Chromium
 per renderizzare il contenuto a video.
@@ -386,8 +403,9 @@ per sviluppare l'editor [Atom](https://atom.io/), ed è poi diventato
 un progetto open-source nel 2014.
 
 L'utenza target di Electron.js sono principalmente gli web developer
-con conoscenze HTML, CSS e JavaScript che vogliono rendere le loro
-applicazioni installabili come app desktop.
+con conoscenze HTML, CSS e JavaScript che vogliono produrre
+applicazioni desktop in maniera semplice e veloce senza il know-how
+dello sviluppo desktop.
 
 **Diffusione.** Electron.js è un framework che non ha avuto una grossa
 esplosione iniziale, ma sicuramente si colloca tra i tool più
@@ -396,8 +414,8 @@ web.
 
 Electron.js inoltre può contare su di un
 [parco applicazioni](https://www.electronjs.org/apps) open-source
-molto ricco che fanno da esempio, oltre ad alcune app sviluppate con
-Electron.js di notevole rilevanza come
+molto ricco che fa da esempio a sviluppatori inesperti, oltre ad
+alcune app sviluppate con Electron.js di notevole rilevanza come
 [WhatsApp](https://www.whatsapp.com/),
 [VS Code](https://code.visualstudio.com/),
 [Twich](https://twitch.com/), [Slack](https://slack.com/) e
@@ -416,15 +434,14 @@ l'esperienza di programmazione in Electron.js.
 Da un punto di vista quantitativo la diffusione di Electron.js può
 essere analizzata visualizzandone il trend su
 [stackoverflow trends](https://insights.stackoverflow.com/trends?tags=electron)
-e [npm trends](https://www.npmtrends.com/electron). Un altro
-riferimento può essere dato dal numero dell GitHub stars che
-attualmente ammontano a
+e [npm trends](https://www.npmtrends.com/electron), oppure tramite il
+numero di GitHub stars che attualmente ammontano a
 [88k](https://github.com/electron/electron/stargazers).
 
 ### Electron Core
 
 Per permettere lo sviluppo di applicazioni eseguibili su tre
-piattaforme diverse con tecnologie web Electron.js usa un particolare
+piattaforme diverse con tecnologie web, Electron.js usa un particolare
 sistema che permette di istanziare un browser Chromium per
 visualizzare il contenuto dell'applicazione in finestre. In più, esso
 ottiene l'accesso alle API di Node.js e può quindi interagire con il
