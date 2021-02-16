@@ -1,5 +1,10 @@
 # Electron React API Demos
 
+![Test](https://github.com/lparolari/electron-react-api-demos/workflows/Test/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+> [Demo download 🚀](https://github.com/lparolari/electron-react-api-demos/releases/latest)
+
 Electron React API Demos is a simple application written in
 [Electron.js](https://www.electronjs.org/) +
 [React.js](https://reactjs.org/) with
@@ -45,27 +50,28 @@ some of the main features from Electron.js framework.
 
 Implemented widgets
 
-|     | Widget                       | Category           |
-| --- | ---------------------------- | ------------------ |
-| ✅  | Framed window                | Windows            |
-| ✅  | Frameless window             | Windows            |
-| ✅  | Managed window               | Windows            |
-| ✅  | Events window                | Windows            |
-| ✅  | Application menu             | Menu               |
-| ✅  | Context menu                 | Menu               |
-| ✅  | File manager                 | Interfaccia nativa |
-| ✅  | External resources           | Interfaccia nativa |
-| ✅  | Basic/advanced notifications | Interfaccia nativa |
-| ✅  | Tray                         | Interfaccia nativa |
-| ✅  | Async messages               | Communication      |
-| ✅  | System/app info              | System             |
-| ✅  | Copy & paste                 | System             |
-| ✅  | Screenshot                   | Media              |
+|     | Widget                       | Category      |
+| --- | ---------------------------- | ------------- |
+| ✅  | Framed window                | Windows       |
+| ✅  | Frameless window             | Windows       |
+| ✅  | Managed window               | Windows       |
+| ✅  | Events window                | Windows       |
+| ✅  | Application menu             | Menu          |
+| ✅  | Context menu                 | Menu          |
+| ✅  | File manager                 | Native UI     |
+| ✅  | External resources           | Native UI     |
+| ✅  | Basic/advanced notifications | Native UI     |
+| ✅  | Tray                         | Native UI     |
+| ✅  | Async messages               | Communication |
+| ✅  | System/app info              | System        |
+| ✅  | Copy & paste                 | System        |
+| ✅  | Screenshot                   | Media         |
 
 ## [Documentation](docs/README.md)
 
 The project is documented through a report available in
-[pdf](link-to-pdf) format or [online](docs/README.md) on GitHub.
+[pdf](https://github.com/lparolari/electron-react-api-demos/releases/latest/download/docs.pdf)
+format or [online](docs/README.md) on GitHub.
 
 The documentation covers three high-level topics:
 
@@ -74,6 +80,12 @@ The documentation covers three high-level topics:
 - [Demo & implemented widgets](docs/README.md#demo);
 
 - [My opinion about the framework](docs/README.md#conclusione).
+
+## [Download](https://github.com/lparolari/electron-react-api-demos/releases/latest)
+
+Download the binaries for your operative system from
+[release](https://github.com/lparolari/electron-react-api-demos/releases/latest)
+page.
 
 ## Usage
 
@@ -93,33 +105,58 @@ yarn
 3. Run the application
 
 ```bash
-yarn start
-yarn start:prod   # for production app
+yarn start        # development
+
+yarn build        # production
+yarn start:prod
 ```
 
 ## Build & Install
 
-You can build the packages on your own with the _packages_ scripts
-available in `package.json`.
+**Intall precompiled package**
+
+Download the app from
+[releases](https://github.com/lparolari/electron-react-api-demos/releases/latest)
+page.
+
+**Build locally**
+
+You can build binaries by running `yarn package`. Many flavors of this
+commands ara avaiable, see the list below.
+
+1. Windows
 
 ```bash
-yarn package-win    # (1)
-yarn package-mac    # (2)
-yarn package-linux  # (3)
+yarn package-win
 ```
 
-1. Builds a package for Windows operating system for x64 systems an
-   provides a `.exe` file.
-2. Builds a `.dmg` package for Mac operating systems
-3. Builds a `.deb` and `.AppImage` package for Linux platforms. Note:
-   you can add also `.rpm` target in `package.json` but it is disabled
-   by default as it required many other dependencies on the local
-   machine.
+Builds a package for Windows (x64) system. Provides a `.exe` file.
+
+2. MacOS
+
+```bash
+yarn package-mac
+```
+
+Builds a package for MacOS system. Provides a `.dmg` file. Please note
+that this was not tested.
+
+3. Linux
+
+```bash
+yarn package-linux
+```
+
+Builds a `.deb` and `.AppImage` binaries for Linux platforms. Note:
+you can add also `.rpm` target in `package.json` but it is disabled by
+default as it required many other dependencies on the local machine.
 
 **Build with Docker**
 
 The following comman allows to easily build an Electron.js application
-from Linux for Windows without installing any dependency.
+from Linux for Windows without installing any dependency. Further
+information on building binaries with docker are available at
+[electron.build/multi-platform-build#docker](electron.build/multi-platform-build#docker)
 
 ```bash
 docker run --rm -ti \
