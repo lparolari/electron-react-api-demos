@@ -1,5 +1,5 @@
 MAINFILE=README
-ATTACHMENTS=demo
+ATTACHMENTS=demo images
 ARGS=--rm --volume "`pwd`:/data" --user `id -u`:`id -g`
 ARGS_EXTRA=--variable urlcolor=blue
 
