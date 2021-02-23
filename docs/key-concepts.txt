@@ -1,0 +1,110 @@
+* obiettivo del mio lavoro
+    ==> studiare il framework Electron.js ed implementare una demo delle
+        principali funzionalità di electron
+    
+* demo: feature principalemnte desktop (finestre, menu), componenti/API del 
+        sistema operativo e feature non del tutto desktop
+
+ELECTON.JS
+==========
+
+* Electron.js
+    - cos'è electron
+    - scope e target
+    - diffusione (testimonials: VS Code, WhatsApp, Twich, ...; community attiva) 
+   
+* Electron Core: cos'è electron e come è composto
+    browser chromium per visualizzare contenuto in finestre + NODEJS (runtime
+    JavaScript) per accesso alle API 
+    
+    ==> quindi framework inerpretato secondo Raj-Tolety
+    
+    ==> vantaggi: offline, riuso dei package nodejs
+    
+* Electron API
+
+    completamente event bases ==> maggiore efficienza nell'utilizzo di 
+    interfacce funzionalità diversificate in base al tipo di processo che le 
+    richiede  ==> main, renderer process
+    
+    MAIN PROC:
+        * creazione di funzionalità native: trays, menu, popup
+        * creazione di renderer process
+        * accesso alle API node.js
+    
+    RENDERER PROC:
+        * gestire la finestra del browser e renderizzarne il contenuto
+        
+    Dialogo trai due processi con IPC mascherato dalle API di Electron.js
+    
+* Funzionalità native
+
+    * gestione finestre
+    * menu
+    * notifiche
+    * progress-bar
+    * scorciatorie da tastiera
+    * e tutte quelle della demo
+    
+* UI tools
+    
+    massima libertà da questo punto di vista
+    sia per framework UI, sia per librerie di componenti grafici
+    
+    NO look & feel nativo!
+    protonkit e proton-native sono falliti (Nota: proton-native è mantenuto
+    da un utente della community ma non ufficialmente supportato)
+    
+* Pro & Contro
+
+    * app web -> app desktop
+    * web developer friendly
+    * compatibile con framework UI + lib grafiche
+    * supporto ai principali sistemi operativi
+    * pieno accesso api sist. operativo
+    * buona doc con esempi
+    
+    * performance limitate (es: non adatto ai giochi)
+    * dimensione bundle elevata
+    * codice disponibile e visibile all'utente (==> minificazione e offuscamento)
+    * molto software di terze parti abbandonato
+    * periferiche I/O limitato (come browser)
+    * look & feel personalizzabile a discrezione del programmatore
+    
+* Alternative (senza approfondire molto)
+
+    No veri e propri competitor (come react e vue, ad esempio), ma
+
+    * NW.js (Node Webkit): funzionalità naodejs dal DOM. Bundling non semplice!
+    
+    * Haxe: kit di sviluppo per app in Haxe e compilazione in diverse 
+      piattaforme (HAXE linguaggio tipato simil typescript). Enfasi sulla
+      portabilità e compilazione in diversi linguaggi. Offre anche compilazione
+      stile electron.js su app dekstop installabili.
+      (https://medium.com/@fontstruct/the-joy-of-haxe-84f933f4b859).
+    
+    * Qt: Qt è un framework cross-platform per lo sviluppo di applicazioni
+      desktop, embedded e mobile.
+    
+* Valutazione
+    
+    E' un ottimo framework per app non complesse e/o che non richiedono troppe
+    performance. IMHO prevalgono i vantaggi rispetto agli svantaggi, ma sempre
+    in relazione a quello che si vuole fare. E comnque è uno degli unici che 
+    out-of-the-box permette di compilare app web per desktop.
+    
+DEMO
+====
+
+Per quanto riguarda la demo
+
+* è stato semplice il bootstra tramite il pacchetto con react installato
+
+* molto semplice la configurazione del builder, tutto già preconfezionato e 
+  con la giusta gestione delle dipendenze
+
+* utilizzo da web developer con qualche nota: es. React non funziona bene se
+  utilizzato in combo con altre finestre (e questo l'ho scoperto sulla mia 
+  pelle) perché è stato pensato per un contesto completamente diverso da 
+  questo.
+
